@@ -15,7 +15,7 @@ const destinations = [
 const FeaturedDestinations = () => {
     const scrollRef = useRef(null);
 
-    const ITEM_WIDTH = 200; 
+    const ITEM_WIDTH = 250; 
     const ITEMS_PER_SCROLL = 5;
     const SCROLL_AMOUNT = ITEM_WIDTH * ITEMS_PER_SCROLL;
 
