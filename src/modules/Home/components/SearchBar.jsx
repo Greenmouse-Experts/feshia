@@ -10,25 +10,25 @@ const SearchBar = ({ bgImageUrl }) => {
                 backgroundPosition: 'center',
             }}
         >
-            <div className="bg-[#c01874] p-3 rounded-lg flex flex-col md:flex-row gap-4 w-full max-w-4xl">
+            <div className="bg-[#ED268F] p-3 rounded-lg flex flex-col md:flex-row gap-4 w-full max-w-4xl">
                 {/* Dropdowns */}
-                <select className="flex-1 px-4 py-5 rounded-md bg-white text-sm focus:outline-none">
+                <select className="flex-1 px-4 py-3 rounded-md bg-white text-sm focus:outline-none">
                     <option>Category</option>
                 </select>
-                <select className="flex-1 px-4 py-5 rounded-md bg-white text-sm focus:outline-none">
+                <select className="flex-1 px-4 py-3 rounded-md bg-white text-sm focus:outline-none">
                     <option>Country</option>
                 </select>
-                <select className="flex-1 px-4 py-5 rounded-md bg-white text-sm focus:outline-none">
+                <select className="flex-1 px-4 py-3 rounded-md bg-white text-sm focus:outline-none">
                     <option>Course</option>
                 </select>
             </div>
 
             {/* Buttons */}
             <div className="flex flex-col md:flex-row gap-4 mt-4">
-                <button className="bg-[#ED268FB8] text-white px-14 py-5 cursor-pointer rounded-md font-medium transition">
+                <button className="bg-[#ED268F] text-white px-14 py-3 cursor-pointer rounded-md font-medium transition">
                     Search
                 </button>
-                <button className="bg-[#ED268FB8] text-white px-14 py-5 cursor-pointer rounded-md font-medium transition">
+                <button className="bg-[#ED268F] text-white px-6 py-3 cursor-pointer rounded-md font-medium transition">
                     Talk to a Consultant
                 </button>
             </div>
