@@ -69,7 +69,7 @@ const FeaturedInstitutions = () => {
             <div className="Resizer">
                 <div className="flex justify-between items-center mb-12">
                     <h2 className="text-2xl text-black font-semibold">Featured Institutions</h2>
-                    <a href="#" className="text-[#ED268F] underline cursor-pointer font-medium text-sm">
+                    <a href="#" className="text-[#ED268F] underline cursor-pointer font-medium text-sm hidden md:block">
                         View More
                     </a>
                 </div>

@@ -9,6 +9,11 @@ const NavBar = () => {
     institution: false,
     resources: false,
   });
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState({
+    student: false,
+    institution: false,
+    resources: false,
+  });
 
   const toggleDropdown = (key) => {
     setDropdownOpen((prev) => ({
@@ -17,8 +22,23 @@ const NavBar = () => {
     }));
   };
 
+  const toggleMobileDropdown = (key) => {
+    setMobileDropdownOpen((prev) => ({
+      ...prev,
+      [key]: !prev[key],
+    }));
+  };
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+    // Reset mobile dropdowns when closing menu
+    if (isMobileMenuOpen) {
+      setMobileDropdownOpen({
+        student: false,
+        institution: false,
+        resources: false,
+      });
+    }
   };
 
   return (
@@ -116,17 +136,95 @@ const NavBar = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-50 backdrop-blur-sm">
-          <div className="fixed right-0 top-0 w-72 bg-white text-black h-full p-6 overflow-y-auto">
-            <button onClick={toggleMobileMenu} className="absolute top-4 right-4">
-              <XMarkIcon className="h-6 w-6 text-black" />
-            </button>
-            <div className="mt-12 flex flex-col gap-4">
-              <a href="#">About Us</a>
-              <a href="#">For Student</a>
-              <a href="#">For Institution</a>
-              <a href="#">Events</a>
-              <a href="#">Resources</a>
-              <a href="#" className="text-pink-600 font-semibold">Talk to a Consultant</a>
+          <div className="fixed right-0 top-0 w-72 bg-white text-black h-full overflow-y-auto shadow-lg">
+            {/* Mobile Menu Header with Logo */}
+            <div className="flex items-center justify-between p-6 border-b border-gray-200">
+              <Link to="/" onClick={toggleMobileMenu}>
+                <img
+                  src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1750848536/feshia%20Images/Frame_1_puzgs4.png"
+                  alt="Feshia"
+                  className="h-12 w-auto"
+                  draggable="false"
+                />
+              </Link>
+              <button onClick={toggleMobileMenu}>
+                <XMarkIcon className="h-6 w-6 text-black" />
+              </button>
+            </div>
+
+            {/* Mobile Menu Content */}
+            <div className="p-6 flex flex-col gap-4">
+              <a href="#" className="text-gray-800 font-medium py-2 hover:text-pink-600 transition">
+                About Us
+              </a>
+
+              {/* For Student Dropdown */}
+              <div>
+                <button
+                  onClick={() => toggleMobileDropdown('student')}
+                  className="flex items-center justify-between w-full text-gray-800 font-medium py-2 hover:text-pink-600 transition"
+                >
+                  For Student 
+                  <ChevronDownIcon className={`w-4 h-4 transition-transform ${mobileDropdownOpen.student ? 'rotate-180' : ''}`} />
+                </button>
+                {mobileDropdownOpen.student && (
+                  <div className="ml-4 mt-2 flex flex-col gap-2">
+                    <a href="#" className="text-gray-600 py-1 hover:text-pink-600 transition">What we do</a>
+                    <a href="#" className="text-gray-600 py-1 hover:text-pink-600 transition">Book an Appointment</a>
+                    <a href="#" className="text-gray-600 py-1 hover:text-pink-600 transition">Student Blog</a>
+                  </div>
+                )}
+              </div>
+
+              {/* For Institution Dropdown */}
+              <div>
+                <button
+                  onClick={() => toggleMobileDropdown('institution')}
+                  className="flex items-center justify-between w-full text-gray-800 font-medium py-2 hover:text-pink-600 transition"
+                >
+                  For Institution 
+                  <ChevronDownIcon className={`w-4 h-4 transition-transform ${mobileDropdownOpen.institution ? 'rotate-180' : ''}`} />
+                </button>
+                {mobileDropdownOpen.institution && (
+                  <div className="ml-4 mt-2 flex flex-col gap-2">
+                    <a href="#" className="text-gray-600 py-1 hover:text-pink-600 transition">Why Feshia</a>
+                    <a href="#" className="text-gray-600 py-1 hover:text-pink-600 transition">Partner with Feshia</a>
+                    <a href="#" className="text-gray-600 py-1 hover:text-pink-600 transition">Institution Blog</a>
+                  </div>
+                )}
+              </div>
+
+              <a href="#" className="text-gray-800 font-medium py-2 hover:text-pink-600 transition">
+                Events
+              </a>
+
+              {/* Resources Dropdown */}
+              <div>
+                <button
+                  onClick={() => toggleMobileDropdown('resources')}
+                  className="flex items-center justify-between w-full text-gray-800 font-medium py-2 hover:text-pink-600 transition"
+                >
+                  Resources 
+                  <ChevronDownIcon className={`w-4 h-4 transition-transform ${mobileDropdownOpen.resources ? 'rotate-180' : ''}`} />
+                </button>
+                {mobileDropdownOpen.resources && (
+                  <div className="ml-4 mt-2 flex flex-col gap-2">
+                    <a href="#" className="text-gray-600 py-1 hover:text-pink-600 transition">Option 1</a>
+                    <a href="#" className="text-gray-600 py-1 hover:text-pink-600 transition">Option 2</a>
+                  </div>
+                )}
+              </div>
+
+              {/* Talk to Consultant Button */}
+              <div className="mt-6 pt-4 border-t border-gray-200">
+                <a
+                  href="#"
+                  className="block w-full bg-pink-600 text-white px-4 py-3 rounded-md text-sm font-medium hover:bg-pink-700 transition text-center"
+                  onClick={toggleMobileMenu}
+                >
+                  Talk to a Consultant
+                </a>
+              </div>
             </div>
           </div>
         </div>

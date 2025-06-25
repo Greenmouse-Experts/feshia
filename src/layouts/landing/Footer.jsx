@@ -117,27 +117,27 @@ const Footer = () => {
                             <ul className="space-y-4 text-sm">
                                 <li>
                                     <strong>Nigeria</strong>
-                                    <ul className="space-y-1 ml-4">
+                                    <ul className="space-y-2 mt-2">
                                         <li>
-                                            <span className="text-pink-600">📍</span> 7 Ikordodu Road, Maryland Behind
+                                         7 Ikordodu Road, Maryland Behind
                                             Maryland BRT Bus Stop Maryland Lagos - Nigeria
                                         </li>
                                         <li>
-                                            <span className="text-pink-600">📞</span> +234 901 994 7067
+                                       +234 901 994 7067
                                         </li>
                                         <li>
-                                            <span className="text-pink-600">📧</span> nigeriaoffice@feshia.com
+                                        nigeriaoffice@feshia.com
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
                                     <strong>Australia</strong>
-                                    <ul className="space-y-1 ml-4">
+                                    <ul className="space-y-2 mt-2">
                                         <li>
-                                            <span className="text-pink-600">📍</span> Box 221, Flinders Lane, VIC 8009
+                                         Box 221, Flinders Lane, VIC 8009
                                         </li>
                                         <li>
-                                            <span className="text-pink-600">📞</span> +61 412 581 295
+                                            +61 412 581 295
                                         </li>
                                     </ul>
                                 </li>
