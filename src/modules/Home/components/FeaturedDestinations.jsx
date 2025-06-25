@@ -16,7 +16,7 @@ const FeaturedDestinations = () => {
     const scrollRef = useRef(null);
 
     // Desktop settings
-    const DESKTOP_ITEM_WIDTH = 250; 
+    const DESKTOP_ITEM_WIDTH = 200; 
     const DESKTOP_ITEMS_PER_SCROLL = 5;
     const DESKTOP_SCROLL_AMOUNT = DESKTOP_ITEM_WIDTH * DESKTOP_ITEMS_PER_SCROLL;
 
