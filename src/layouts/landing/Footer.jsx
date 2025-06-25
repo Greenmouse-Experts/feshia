@@ -91,9 +91,9 @@ const Footer = () => {
                 <div className="flex flex-col items-center justify-center mt-8 text-center">
                     <Link to="/">
                         <img
-                            src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1750764334/feshia%20Images/Logo_1_uupwwy.png"
+                            src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1750848536/feshia%20Images/Frame_1_puzgs4.png"
                             alt="Feshia"
-                            className="h-16"
+                            className="h-16 hidden md:block"
                             draggable="false"
                         />
                     </Link>
@@ -186,7 +186,7 @@ const Footer = () => {
                         <div className="flex flex-col items-center justify-center mt-8 text-center">
                             <Link to="/">
                                 <img
-                                    src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1750764334/feshia%20Images/Logo_1_uupwwy.png"
+                                    src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1750848536/feshia%20Images/Frame_1_puzgs4.png"
                                     alt="Feshia"
                                     className="h-16 w-auto"
                                     draggable="false"
