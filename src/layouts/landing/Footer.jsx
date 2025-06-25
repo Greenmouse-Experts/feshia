@@ -8,37 +8,37 @@ const Footer = () => {
         <footer className="bg-black text-white only-top px-4">
             <div className="Resizer mx-auto">
                 {/* Desktop Layout */}
-                <div className="hidden md:grid md:grid-cols-4 gap-8">
+                <div className="hidden md:grid md:grid-cols-5 gap-8">
                     {/* CONTACT */}
-                    <div>
-                        <h3 className="text-white font-bold mb-4">CONTACT</h3>
+                    <div className="col-span-2 p-6">
+                        <h3 className="text-white text-lg font-bold mb-4">CONTACT</h3>
                         <ul className="space-y-4 text-sm">
                             <li>
                                 <strong>Nigeria</strong>
-                                <ul className="space-y-3 ml-4 text-sx">
+                                <ul className="space-y-3 mt-3 ml-4 text-sx">
                                     <li className="flex items-center">
-                                        <MapPinIcon className="h-8 w-8 text-[#ED268F] mr-2" />
-                                        7 Ikordodu Road, Maryland Behind Maryland BRT Bus Stop Maryland Lagos - Nigeria
+                                        <MapPinIcon className="h-5 w-5 text-[#ED268F] mr-2" />
+                                        7 Ikorodu Road, Maryland Behind Maryland BRT Bus Stop Maryland Lagos - Nigeria
                                     </li>
                                     <li className="flex items-center">
-                                        <PhoneIcon className="h-3 w-3 text-[#ED268F] mr-2" />
+                                        <PhoneIcon className="h-5 w-5 text-[#ED268F] mr-2" />
                                         +234 901 994 7067
                                     </li>
                                     <li className="flex items-center">
-                                        <EnvelopeIcon className="h-3 w-3 text-[#ED268F] mr-2" />
+                                        <EnvelopeIcon className="h-5 w-5 text-[#ED268F] mr-2" />
                                         nigeriaoffice@feshia.com
                                     </li>
                                 </ul>
                             </li>
                             <li>
                                 <strong>Australia</strong>
-                                <ul className="space-y-1 ml-4">
+                                <ul className="space-y-3 mt-3 ml-4 text-sx">
                                     <li className="flex items-center">
-                                        <MapPinIcon className="h-3 w-3 text-pink-600 mr-2" />
+                                        <MapPinIcon className="h-5 w-5 text-pink-600 mr-2" />
                                         Box 221, Flinders Lane, VIC 8009
                                     </li>
                                     <li className="flex items-center">
-                                        <PhoneIcon className="h-3 w-3 text-pink-600 mr-2" />
+                                        <PhoneIcon className="h-5 w-5 text-pink-600 mr-2" />
                                         +61 412 581 295
                                     </li>
                                 </ul>
@@ -47,8 +47,8 @@ const Footer = () => {
                     </div>
 
                     {/* COMPANY */}
-                    <div>
-                        <h3 className="text-white font-bold mb-4">COMPANY</h3>
+                    <div className="col-span-1">
+                        <h3 className="text-white text-lg font-bold mb-4">COMPANY</h3>
                         <ul className="space-y-4 text-sm">
                             <li>About Us</li>
                             <li>For Student</li>
@@ -60,8 +60,8 @@ const Footer = () => {
                     </div>
 
                     {/* QUICK LINKS */}
-                    <div>
-                        <h3 className="text-white font-bold mb-4">QUICK LINKS</h3>
+                    <div className="col-span-1">
+                        <h3 className="text-white text-lg font-bold mb-4">QUICK LINKS</h3>
                         <ul className="space-y-4 text-sm">
                             <li>Articles</li>
                             <li>Contact Us</li>
@@ -73,8 +73,8 @@ const Footer = () => {
                     </div>
 
                     {/* STUDY ABROAD */}
-                    <div>
-                        <h3 className="text-white font-bold mb-4">STUDY ABROAD</h3>
+                    <div className="col-span-1">
+                        <h3 className="text-white text-lg font-bold mb-4">STUDY ABROAD</h3>
                         <ul className="space-y-4 text-sm">
                             <li>Australia</li>
                             <li>Canada</li>
@@ -87,16 +87,24 @@ const Footer = () => {
                     </div>
                 </div>
 
+
                 <div className="flex flex-col items-center justify-center mt-8 text-center">
                     <Link to="/">
                         <img
                             src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1750764334/feshia%20Images/Logo_1_uupwwy.png"
                             alt="Feshia"
-                            className="h-16 w-auto"
+                            className="h-16"
                             draggable="false"
                         />
                     </Link>
-                    <p className="text-xs mt-4">©️ 2025 Feshia, All Rights Reserved</p>
+
+                </div>
+
+                <div className="flex flex-col items-center justify-center mt-8 text-center">
+                    <div className="hidden md:block">
+
+                        <p className="text-xs text-center mt-8">©️ 2025 Feshia, All Rights Reserved</p>
+                    </div>
                 </div>
 
 
@@ -105,7 +113,7 @@ const Footer = () => {
                     <div className="space-y-8">
                         {/* CONTACT */}
                         <div>
-                            <h3 className="text-white font-bold mb-4">CONTACT</h3>
+                            <h3 className="text-white text-lg font-bold mb-4">CONTACT</h3>
                             <ul className="space-y-4 text-sm">
                                 <li>
                                     <strong>Nigeria</strong>
@@ -138,7 +146,7 @@ const Footer = () => {
 
                         {/* COMPANY */}
                         <div>
-                            <h3 className="text-white font-bold mb-4">COMPANY</h3>
+                            <h3 className="text-white text-lg font-bold mb-4">COMPANY</h3>
                             <ul className="space-y-4 text-sm">
                                 <li>About Us</li>
                                 <li>For Student</li>
@@ -151,7 +159,7 @@ const Footer = () => {
 
                         {/* QUICK LINKS */}
                         <div>
-                            <h3 className="text-white font-bold mb-4">QUICK LINKS</h3>
+                            <h3 className="text-white text-lg font-bold mb-4">QUICK LINKS</h3>
                             <ul className="space-y-4 text-sm">
                                 <li>Articles</li>
                                 <li>Contact Us</li>
@@ -164,7 +172,7 @@ const Footer = () => {
 
                         {/* STUDY ABROAD */}
                         <div>
-                            <h3 className="text-white font-bold mb-4">STUDY ABROAD</h3>
+                            <h3 className="text-white text-lg font-bold mb-4">STUDY ABROAD</h3>
                             <ul className="space-y-4">
                                 <li>Australia</li>
                                 <li>Canada</li>
