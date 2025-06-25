@@ -10,22 +10,22 @@ const Footer = () => {
                 {/* Desktop Layout */}
                 <div className="hidden md:grid md:grid-cols-5 gap-8">
                     {/* CONTACT */}
-                    <div className="col-span-2 p-6">
+                    <div className="col-span-2">
                         <h3 className="text-white text-lg font-bold mb-4">CONTACT</h3>
                         <ul className="space-y-4 text-sm">
                             <li>
                                 <strong>Nigeria</strong>
                                 <ul className="space-y-3 mt-3 ml-4 text-sx">
                                     <li className="flex items-center">
-                                        <MapPinIcon className="h-5 w-5 text-[#ED268F] mr-2" />
+                                        <MapPinIcon className="h-4 w-4 text-[#ED268F] mr-2" />
                                         7 Ikorodu Road, Maryland Behind Maryland BRT Bus Stop Maryland Lagos - Nigeria
                                     </li>
                                     <li className="flex items-center">
-                                        <PhoneIcon className="h-5 w-5 text-[#ED268F] mr-2" />
+                                        <PhoneIcon className="h-4 w-4 text-[#ED268F] mr-2" />
                                         +234 901 994 7067
                                     </li>
                                     <li className="flex items-center">
-                                        <EnvelopeIcon className="h-5 w-5 text-[#ED268F] mr-2" />
+                                        <EnvelopeIcon className="h-4 w-4 text-[#ED268F] mr-2" />
                                         nigeriaoffice@feshia.com
                                     </li>
                                 </ul>
@@ -34,11 +34,11 @@ const Footer = () => {
                                 <strong>Australia</strong>
                                 <ul className="space-y-3 mt-3 ml-4 text-sx">
                                     <li className="flex items-center">
-                                        <MapPinIcon className="h-5 w-5 text-pink-600 mr-2" />
+                                        <MapPinIcon className="h-4 w-4 text-pink-600 mr-2" />
                                         Box 221, Flinders Lane, VIC 8009
                                     </li>
                                     <li className="flex items-center">
-                                        <PhoneIcon className="h-5 w-5 text-pink-600 mr-2" />
+                                        <PhoneIcon className="h-4 w-4 text-pink-600 mr-2" />
                                         +61 412 581 295
                                     </li>
                                 </ul>
@@ -194,7 +194,6 @@ const Footer = () => {
                             </Link>
                             <p className="text-xs mt-4">©️ 2025 Feshia, All Rights Reserved</p>
                         </div>
-
                     </div>
                 </div>
             </div>

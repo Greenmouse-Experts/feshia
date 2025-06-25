@@ -22,8 +22,10 @@ const slides = [
 
 const Banner = () => {
   const [current, setCurrent] = useState(0);
-  const [formOpen, setFormOpen] = useState(true);
+  const [formOpen, setFormOpen] = useState(false);
+  const [formShownOnce, setFormShownOnce] = useState(false);
 
+  // Slide rotation
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
@@ -31,21 +33,46 @@ const Banner = () => {
     return () => clearInterval(timer);
   }, []);
 
+  // Show form after 3 minutes (180,000 ms)
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (!formShownOnce) {
+        setFormOpen(true);
+        setFormShownOnce(true);
+      }
+    }, 180000); // 3 minutes
+
+    return () => clearTimeout(timeout);
+  }, [formShownOnce]);
+
+  // Show form on exit intent
+  useEffect(() => {
+    const handleMouseLeave = (e) => {
+      if (e.clientY < 50 && !formShownOnce) {
+        setFormOpen(true);
+        setFormShownOnce(true);
+      }
+    };
+    document.addEventListener('mouseout', handleMouseLeave);
+    return () => document.removeEventListener('mouseout', handleMouseLeave);
+  }, [formShownOnce]);
+
   return (
-    <div className="relative w-full h-[450px] md:h-[750px] overflow-hidden flex">
+    <div className="relative w-full h-[450px] -mt-20 md:h-[770px] overflow-hidden flex">
       {/* Background Image */}
       <AnimatePresence mode="wait">
         <motion.div
-
-          className="absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-500"
+          key={slides[current].id}
+          className="absolute inset-0 w-full h-full bg-cover bg-center"
           style={{
-            backgroundImage: `url(${slides[current].image})`, opacity: 1,
-            transition: "background-image 0.5s ease-in-out",
+            backgroundImage: `url(${slides[current].image})`,
+            opacity: 1,
+            transition: 'background-image 0.5s ease-in-out',
           }}
         />
       </AnimatePresence>
 
-      {/* Banner Text and Date */}
+      {/* Banner Text */}
       <div className="z-10 p-6 sm:p-10 md:pl-4 lg:pl-24 max-w-3xl text-white self-center">
         <motion.div
           key={slides[current].id}
@@ -55,21 +82,21 @@ const Banner = () => {
           transition={{ duration: 0.5 }}
           className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug"
         >
-         {slides[current].text === 'Explore courses that match your career aspirations!' && (
+          {slides[current].text.includes('courses') && (
             <>
               <span className="text-white">Explore </span>
               <span className="text-pink-600">courses</span>
               <span className="text-white"> that match your career aspirations!</span>
             </>
           )}
-          {slides[current].text === 'Explore countries that match your career aspirations!' && (
+          {slides[current].text.includes('countries') && (
             <>
               <span className="text-white">Explore </span>
               <span className="text-pink-600">countries</span>
               <span className="text-white"> that match your career aspirations!</span>
             </>
           )}
-          {slides[current].text === 'Explore universities that match your career aspirations!' && (
+          {slides[current].text.includes('universities') && (
             <>
               <span className="text-white">Explore </span>
               <span className="text-pink-600">universities</span>
@@ -79,7 +106,7 @@ const Banner = () => {
         </motion.div>
       </div>
 
-      {/* Form Section */}
+      {/* Form */}
       <AnimatePresence>
         {formOpen && (
           <motion.div
@@ -87,68 +114,79 @@ const Banner = () => {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ duration: 0.5 }}
-            className="absolute top-[120px] bottom-[40px] right-35 h-auto rounded-md w-full sm:w-[480px] bg-white z-20 p-6 flex items-center justify-center hidden md:flex"
-
+            className="absolute top-[100px] bottom-[30px] right-35 h-auto rounded-md w-full sm:w-[450px] bg-white z-20 flex items-center justify-center hidden md:flex overflow-hidden"
           >
-            {/* Close Button */}
-            <button
-              className="absolute top-4 right-4 text-gray-600 hover:text-black"
-              onClick={() => setFormOpen(false)}
-            >
-              <XMarkIcon className="h-6 w-6" />
-            </button>
+            {/* Pink Header */}
+            <div className="absolute top-0 left-0 right-0 bg-pink-500 text-white px-6 py-3 flex items-center justify-between">
+              <h2 className="text-lg font-medium">Fill the Form</h2>
+              {/* Close Button */}
+              <button
+                className="text-black hover:text-gray-200 bg-white bg-opacity-20 rounded-full p-1"
+                onClick={() => setFormOpen(false)}
+              >
+                <XMarkIcon className="h-5 w-5" />
+              </button>
+            </div>
 
-            <div className="w-full max-w-md">
-              <h2 className="text-pink-600 text-base font-medium mb-4">
-                Please provide your <span className="font-semibold">details to continue using Feshia</span>
-              </h2>
+            {/* Form Content */}
+            <div className="w-full max-w-md pt-20 pb-6 px-6">
+              <p className="text-gray-700 text-sm mb-4">
+                Please provide your details to continue using Feshia
+              </p>
 
-              <form className="space-y-3">
+              <form className="space-y-4">
                 <div>
-                  <label className="block text-sm mb-2 font-medium">Full name</label>
-                  <input className="w-full p-2 border border-[#CCCCCC] outline-none italic rounded-md" placeholder="Full name" />
-                </div>
-                <div>
-                  <label className="block text-sm mb-2 font-medium">Email</label>
-                  <input className="w-full p-2 border border-[#CCCCCC] outline-none italic rounded-md" placeholder="Email" />
-                </div>
-                <div>
-                  <label className="block text-sm mb-2 font-medium">Phone Number</label>
-                  <input className="w-full p-2 border border-[#CCCCCC] outline-none italic rounded-md" placeholder="Phone" />
-                </div>
-
-                <div>
-                  <label className="block text-sm mb-2 font-medium">Preferred Study Destination</label>
-                  <select className="w-full p-2 border border-[#CCCCCC] italic outline-none rounded-md">
-                    <option>Australia</option>
-                    <option>UK</option>
-                    <option>USA</option>
-                    <option>Canada</option>
-                  </select>
+                  <label className="block text-sm mb-2 font-medium text-gray-700">Full Name</label>
+                  <input
+                    className="w-full p-3 border-1 border-pink-400 outline-none rounded-md placeholder-gray-400"
+                    placeholder="Enter Your Name"
+                  />
                 </div>
 
                 <div>
-                  <label className="block text-sm mb-2 font-medium">Preferred Study Year</label>
-                  <select className="w-full p-2 border border-[#CCCCCC] italic outline-none rounded-md">
-                    <option>2025</option>
-                    <option>2024</option>
-                    <option>2023</option>
-                  </select>
+                  <label className="block text-sm mb-2 font-medium text-gray-700">Email</label>
+                  <input
+                    className="w-full p-3 border-1 border-pink-400 outline-none rounded-md placeholder-gray-400"
+                    placeholder="Enter Your Email"
+                  />
                 </div>
 
                 <div>
-                  <label className="block text-sm mb-3 font-medium">Preferred Intake</label>
-                  <select className="w-full p-2 border border-[#CCCCCC] italic outline-none rounded-md">
-                    <option>Q1 (Jan-Mar)</option>
-                    <option>Q2 (Apr-Jun)</option>
-                    <option>Q3 (Jul-Sep)</option>
-                    <option>Q4 (Oct-Dec)</option>
-                  </select>
+                  <label className="block text-sm mb-2 font-medium text-gray-700">Phone</label>
+                  <input
+                    className="w-full p-3 border-1 border-pink-400 outline-none rounded-md placeholder-gray-400"
+                    placeholder=""
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm mb-2 font-medium text-gray-700">Preferred Study Destination</label>
+                  <input
+                    className="w-full p-3 border-1 border-pink-400 outline-none rounded-md placeholder-gray-400"
+                    placeholder="Q1(Jan-Mar)"
+                  />
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm mb-2 font-medium text-gray-700">Preferred study Year</label>
+                    <input
+                      className="w-full p-3 border-1 border-pink-400 outline-none rounded-md placeholder-gray-400"
+                      placeholder="2025"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm mb-2 font-medium text-gray-700">Preferred study Year</label>
+                    <input
+                      className="w-full p-3 border-1 border-pink-400 outline-none rounded-md placeholder-gray-400"
+                      placeholder="Q1(Jan-Mar)"
+                    />
+                  </div>
                 </div>
 
                 <button
                   type="submit"
-                  className="bg-pink-600 hover:bg-pink-700 w-full py-2 rounded text-white font-semibold mt-3"
+                  className="bg-pink-500 hover:bg-pink-600 w-full py-3 rounded-md text-white font-medium mt-4"
                 >
                   Submit
                 </button>

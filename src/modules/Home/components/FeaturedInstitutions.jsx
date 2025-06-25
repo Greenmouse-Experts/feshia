@@ -10,10 +10,58 @@ const institutions = Array(6).fill({
         "https://res.cloudinary.com/greenmouse-tech/image/upload/v1750803402/feshia%20Images/images_6_1_qksjbu.png",
 });
 
-const articles = Array(10).fill({
-    title: "Top 4 reasons for studying Masters Abroad",
-    date: "June 20, 2025",
-});
+const articles = [
+    {
+        title: "Top 4 reasons for studying Masters Abroad",
+        date: "June 20, 2025",
+        image: "https://res.cloudinary.com/greenmouse-tech/image/upload/v1750803402/feshia%20Images/images_6_1_qksjbu.png"
+    },
+    {
+        title: "Best Universities for Engineering in Canada",
+        date: "June 18, 2025",
+        image: "https://res.cloudinary.com/greenmouse-tech/image/upload/v1750803402/feshia%20Images/images_6_1_qksjbu.png"
+    },
+    {
+        title: "Scholarship Opportunities in Australia",
+        date: "June 15, 2025",
+        image: "https://res.cloudinary.com/greenmouse-tech/image/upload/v1750803402/feshia%20Images/images_6_1_qksjbu.png"
+    },
+    {
+        title: "Student Life in European Universities",
+        date: "June 12, 2025",
+        image: "https://res.cloudinary.com/greenmouse-tech/image/upload/v1750803402/feshia%20Images/images_6_1_qksjbu.png"
+    },
+    {
+        title: "How to Prepare for IELTS Exam",
+        date: "June 10, 2025",
+        image: "https://res.cloudinary.com/greenmouse-tech/image/upload/v1750803402/feshia%20Images/images_6_1_qksjbu.png"
+    },
+    {
+        title: "MBA Programs in Top US Universities",
+        date: "June 8, 2025",
+        image: "https://res.cloudinary.com/greenmouse-tech/image/upload/v1750803402/feshia%20Images/images_6_1_qksjbu.png"
+    },
+    {
+        title: "Study Abroad Application Timeline",
+        date: "June 5, 2025",
+        image: "https://res.cloudinary.com/greenmouse-tech/image/upload/v1750803402/feshia%20Images/images_6_1_qksjbu.png"
+    },
+    {
+        title: "Understanding Student Visa Requirements",
+        date: "June 3, 2025",
+        image: "https://res.cloudinary.com/greenmouse-tech/image/upload/v1750803402/feshia%20Images/images_6_1_qksjbu.png"
+    },
+    {
+        title: "Cost of Living for International Students",
+        date: "June 1, 2025",
+        image: "https://res.cloudinary.com/greenmouse-tech/image/upload/v1750803402/feshia%20Images/images_6_1_qksjbu.png"
+    },
+    {
+        title: "Top Medical Schools Around the World",
+        date: "May 28, 2025",
+        image: "https://res.cloudinary.com/greenmouse-tech/image/upload/v1750803402/feshia%20Images/images_6_1_qksjbu.png"
+    }
+];
 
 const FeaturedInstitutions = () => {
     return (
@@ -58,19 +106,28 @@ const FeaturedInstitutions = () => {
                         ))}
                     </div>
 
-                    {/* Scrollable Article Sidebar */}
-                    <div className="bg-gray-100 rounded-md p-4 max-h-[550px] overflow-y-auto custom-scrollbar scrollbar-hide scrollbar-track-gray-200">
-                        <h3 className="text-2xl font-semibold mb-4">Articles</h3>
-                        <ul className="space-y-4">
+                    {/* Articles Sidebar with Images */}
+                    <div className="bg-[#F4F4F4] border border-gray-200 rounded-lg p-4 max-h-[850px] overflow-y-auto">
+                        <div className="flex justify-between items-center mb-4">
+                            <h3 className="text-2xl font-semibold text-gray-800">Articles</h3>
+                            {/* <a href="#" className="text-[#ED268F] text-sm font-medium underline">
+                                View All
+                            </a> */}
+                        </div>
+                        
+                        <div className="space-y-4">
                             {articles.map((article, index) => (
-                                <li key={index} className="text-sm">
-                                    <p className="font-medium">{article.title}</p>
-                                    <p className="text-gray-500 text-xs">Posted on {article.date}</p>
-                                </li>
+                                <div key={index} className="flex gap-3 pb-4 border-b border-gray-100 last:border-b-0">
+                                    <div className="flex-1 min-w-0">
+                                        <h4 className="font-medium text-sm text-gray-800 leading-tight mb-1 line-clamp-2">
+                                            {article.title}
+                                        </h4>
+                                        <p className="text-xs text-gray-500">
+                                            Posted on {article.date}
+                                        </p>
+                                    </div>
+                                </div>
                             ))}
-                        </ul>
-                        <div className="mt-4 text-sm text-center font-medium underline text-[#ED268F] cursor-pointer">
-                            View All
                         </div>
                     </div>
                 </div>
