@@ -87,18 +87,23 @@ const FeaturedInstitutions = () => {
                                     <h3 className="font-semibold text-base mb-3">{inst.title}</h3>
                                     <p className="text-gray-500 mb-3">{inst.location}</p>
 
-                                    <div className="flex justify-between text-[#ED268F]">
-                                        <div>
-                                            <p>QS Rank</p>
-                                            <p className="font-bold text-black leading-loose">{inst.rank}</p>
+                                    <div className="text-[#ED268F]">
+                                        {/* Top row with QS Rank and Scholarship */}
+                                        <div className="flex justify-between mb-3">
+                                            <div>
+                                                <p className="text-sm">QS Rank</p>
+                                                <p className="font-bold text-black leading-tight">{inst.rank}</p>
+                                            </div>
+                                            <div>
+                                                <p className="text-sm">Scholarship</p>
+                                                <p className="font-bold text-black leading-tight">{inst.scholarship}</p>
+                                            </div>
                                         </div>
+
+                                        {/* Bottom row with Intl. Student */}
                                         <div>
-                                            <p>Scholarship</p>
-                                            <p className="font-bold text-black leading-loose">{inst.scholarship}</p>
-                                        </div>
-                                        <div>
-                                            <p>Intl. Student</p>
-                                            <p className="font-bold text-black leading-loose">{inst.students}</p>
+                                            <p className="text-sm">Intl. Student</p>
+                                            <p className="font-bold text-black leading-tight">{inst.students}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -107,14 +112,12 @@ const FeaturedInstitutions = () => {
                     </div>
 
                     {/* Articles Sidebar with Images */}
-                    <div className="bg-[#F4F4F4] border border-gray-200 rounded-lg p-4 max-h-[850px] overflow-y-auto">
+                    <div className="bg-[#F4F4F4] border border-gray-200 rounded-lg p-4 custom-scrollbar max-h-[900px] overflow-y-auto">
                         <div className="flex justify-between items-center mb-4">
                             <h3 className="text-2xl font-semibold text-gray-800">Articles</h3>
-                            {/* <a href="#" className="text-[#ED268F] text-sm font-medium underline">
-                                View All
-                            </a> */}
+                            
                         </div>
-                        
+
                         <div className="space-y-4">
                             {articles.map((article, index) => (
                                 <div key={index} className="flex gap-3 pb-4 border-b border-gray-100 last:border-b-0">
@@ -125,9 +128,16 @@ const FeaturedInstitutions = () => {
                                         <p className="text-xs text-gray-500">
                                             Posted on {article.date}
                                         </p>
+
                                     </div>
                                 </div>
                             ))}
+                            <p className="text-center">
+                            <a href="#" className="text-[#000000] underline  cursor-pointer font-bold text-sm">
+                            View All
+                            </a>
+                            </p>
+                            
                         </div>
                     </div>
                 </div>

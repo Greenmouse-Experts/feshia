@@ -16,7 +16,7 @@ const Footer = () => {
                             <li>
                                 <strong>Nigeria</strong>
                                 <ul className="space-y-3 mt-3 ml-4 text-sx">
-                                    <li className="flex items-center">
+                                    <li className="flex items-center mr-10">
                                         <MapPinIcon className="h-4 w-4 text-[#ED268F] mr-2" />
                                         7 Ikorodu Road, Maryland Behind Maryland BRT Bus Stop Maryland Lagos - Nigeria
                                     </li>

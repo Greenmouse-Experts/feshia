@@ -56,7 +56,7 @@ const FeaturedDestinations = () => {
                 {/* Destination Flags */}
                 <div
                     ref={scrollRef}
-                    className="flex gap-6 overflow-x-auto scrollbar-hide px-10 py-4 scroll-smooth"
+                    className="flex gap-6 overflow-hidden scrollbar-hide px-10 py-4 scroll-smooth"
                 >
                     {destinations.map((dest, idx) => (
                         <div
