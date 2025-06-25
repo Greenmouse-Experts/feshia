@@ -38,14 +38,11 @@ const NavBar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center  md:space-x-2 xl:px-16 md:px-8 py-4 rounded-md bg-black/80 text-white xl:ml-28 md:ml-2">
+          <div className="hidden md:flex items-center  md:space-x-8 xl:px-8 md:px-8 py-4 rounded-md bg-black/50 text-white xl:ml-24">
             <a href="#" className="text-sm font-medium hover:text-pink-500 transition">About Us</a>
 
             <div className="relative">
-              <button
-                onClick={() => toggleDropdown('student')}
-                className="flex items-center gap-1 text-sm font-medium hover:text-pink-500 transition"
-              >
+              <button onClick={() => toggleDropdown('student')} className="flex items-center gap-1 text-sm font-medium hover:text-pink-500 transition">
                 For Student <ChevronDownIcon className="w-4 h-4" />
               </button>
               {dropdownOpen.student && (
@@ -58,10 +55,7 @@ const NavBar = () => {
             </div>
 
             <div className="relative">
-              <button
-                onClick={() => toggleDropdown('institution')}
-                className="flex items-center gap-1 text-sm font-medium hover:text-pink-500 transition"
-              >
+              <button onClick={() => toggleDropdown('institution')} className="flex items-center gap-1 text-sm font-medium hover:text-pink-500 transition">
                 For Institution <ChevronDownIcon className="w-4 h-4" />
               </button>
               {dropdownOpen.institution && (
@@ -76,10 +70,7 @@ const NavBar = () => {
             <a href="#" className="text-sm font-medium hover:text-pink-500 transition">Events</a>
 
             <div className="relative">
-              <button
-                onClick={() => toggleDropdown('resources')}
-                className="flex items-center gap-1 text-sm font-medium hover:text-pink-500 transition"
-              >
+              <button onClick={() => toggleDropdown('resources')} className="flex items-center gap-1 text-sm font-medium hover:text-pink-500 transition">
                 Resources <ChevronDownIcon className="w-4 h-4" />
               </button>
               {dropdownOpen.resources && (
