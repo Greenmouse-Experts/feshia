@@ -38,7 +38,7 @@ const NavBar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center xl:space-x-14 md:space-x-2 xl:px-16 md:px-8 py-4 rounded-md bg-black/80 text-white xl:ml-28 md:ml-2">
+          <div className="hidden md:flex items-center  md:space-x-2 xl:px-16 md:px-8 py-4 rounded-md bg-black/80 text-white xl:ml-28 md:ml-2">
             <a href="#" className="text-sm font-medium hover:text-pink-500 transition">About Us</a>
 
             <div className="relative">
