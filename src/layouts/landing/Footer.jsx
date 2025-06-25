@@ -1,0 +1,197 @@
+import React from 'react';
+import { MapPinIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
+import { Link } from 'react-router-dom';
+
+
+const Footer = () => {
+    return (
+        <footer className="bg-black text-white only-top px-4">
+            <div className="Resizer mx-auto">
+                {/* Desktop Layout */}
+                <div className="hidden md:grid md:grid-cols-4 gap-8">
+                    {/* CONTACT */}
+                    <div>
+                        <h3 className="text-white font-bold mb-4">CONTACT</h3>
+                        <ul className="space-y-4 text-sm">
+                            <li>
+                                <strong>Nigeria</strong>
+                                <ul className="space-y-3 ml-4 text-sx">
+                                    <li className="flex items-center">
+                                        <MapPinIcon className="h-8 w-8 text-[#ED268F] mr-2" />
+                                        7 Ikordodu Road, Maryland Behind Maryland BRT Bus Stop Maryland Lagos - Nigeria
+                                    </li>
+                                    <li className="flex items-center">
+                                        <PhoneIcon className="h-3 w-3 text-[#ED268F] mr-2" />
+                                        +234 901 994 7067
+                                    </li>
+                                    <li className="flex items-center">
+                                        <EnvelopeIcon className="h-3 w-3 text-[#ED268F] mr-2" />
+                                        nigeriaoffice@feshia.com
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Australia</strong>
+                                <ul className="space-y-1 ml-4">
+                                    <li className="flex items-center">
+                                        <MapPinIcon className="h-3 w-3 text-pink-600 mr-2" />
+                                        Box 221, Flinders Lane, VIC 8009
+                                    </li>
+                                    <li className="flex items-center">
+                                        <PhoneIcon className="h-3 w-3 text-pink-600 mr-2" />
+                                        +61 412 581 295
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* COMPANY */}
+                    <div>
+                        <h3 className="text-white font-bold mb-4">COMPANY</h3>
+                        <ul className="space-y-4 text-sm">
+                            <li>About Us</li>
+                            <li>For Student</li>
+                            <li>For Institution</li>
+                            <li>Resources</li>
+                            <li>Events</li>
+                            <li>Apply Now</li>
+                        </ul>
+                    </div>
+
+                    {/* QUICK LINKS */}
+                    <div>
+                        <h3 className="text-white font-bold mb-4">QUICK LINKS</h3>
+                        <ul className="space-y-4 text-sm">
+                            <li>Articles</li>
+                            <li>Contact Us</li>
+                            <li>Disclaimer</li>
+                            <li>FAQs</li>
+                            <li>Privacy Policy</li>
+                            <li>Terms & Condition</li>
+                        </ul>
+                    </div>
+
+                    {/* STUDY ABROAD */}
+                    <div>
+                        <h3 className="text-white font-bold mb-4">STUDY ABROAD</h3>
+                        <ul className="space-y-4 text-sm">
+                            <li>Australia</li>
+                            <li>Canada</li>
+                            <li>United Kingdom</li>
+                            <li>United States</li>
+                            <li>Germany</li>
+                            <li>Netherlands</li>
+                            <li>France</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="flex flex-col items-center justify-center mt-8 text-center">
+                    <Link to="/">
+                        <img
+                            src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1750764334/feshia%20Images/Logo_1_uupwwy.png"
+                            alt="Feshia"
+                            className="h-16 w-auto"
+                            draggable="false"
+                        />
+                    </Link>
+                    <p className="text-xs mt-4">©️ 2025 Feshia, All Rights Reserved</p>
+                </div>
+
+
+                {/* Mobile Layout */}
+                <div className="md:hidden">
+                    <div className="space-y-8">
+                        {/* CONTACT */}
+                        <div>
+                            <h3 className="text-white font-bold mb-4">CONTACT</h3>
+                            <ul className="space-y-4 text-sm">
+                                <li>
+                                    <strong>Nigeria</strong>
+                                    <ul className="space-y-1 ml-4">
+                                        <li>
+                                            <span className="text-pink-600">📍</span> 7 Ikordodu Road, Maryland Behind
+                                            Maryland BRT Bus Stop Maryland Lagos - Nigeria
+                                        </li>
+                                        <li>
+                                            <span className="text-pink-600">📞</span> +234 901 994 7067
+                                        </li>
+                                        <li>
+                                            <span className="text-pink-600">📧</span> nigeriaoffice@feshia.com
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Australia</strong>
+                                    <ul className="space-y-1 ml-4">
+                                        <li>
+                                            <span className="text-pink-600">📍</span> Box 221, Flinders Lane, VIC 8009
+                                        </li>
+                                        <li>
+                                            <span className="text-pink-600">📞</span> +61 412 581 295
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        {/* COMPANY */}
+                        <div>
+                            <h3 className="text-white font-bold mb-4">COMPANY</h3>
+                            <ul className="space-y-4 text-sm">
+                                <li>About Us</li>
+                                <li>For Student</li>
+                                <li>For Institution</li>
+                                <li>Resources</li>
+                                <li>Events</li>
+                                <li>Apply Now</li>
+                            </ul>
+                        </div>
+
+                        {/* QUICK LINKS */}
+                        <div>
+                            <h3 className="text-white font-bold mb-4">QUICK LINKS</h3>
+                            <ul className="space-y-4 text-sm">
+                                <li>Articles</li>
+                                <li>Contact Us</li>
+                                <li>Disclaimer</li>
+                                <li>FAQs</li>
+                                <li>Privacy Policy</li>
+                                <li>Terms & Condition</li>
+                            </ul>
+                        </div>
+
+                        {/* STUDY ABROAD */}
+                        <div>
+                            <h3 className="text-white font-bold mb-4">STUDY ABROAD</h3>
+                            <ul className="space-y-4">
+                                <li>Australia</li>
+                                <li>Canada</li>
+                                <li>United Kingdom</li>
+                                <li>United States</li>
+                                <li>Germany</li>
+                                <li>Netherlands</li>
+                                <li>France</li>
+                            </ul>
+                        </div>
+                        <div className="flex flex-col items-center justify-center mt-8 text-center">
+                            <Link to="/">
+                                <img
+                                    src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1750764334/feshia%20Images/Logo_1_uupwwy.png"
+                                    alt="Feshia"
+                                    className="h-16 w-auto"
+                                    draggable="false"
+                                />
+                            </Link>
+                            <p className="text-xs mt-4">©️ 2025 Feshia, All Rights Reserved</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+};
+
+export default Footer;
