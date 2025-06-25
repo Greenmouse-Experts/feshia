@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const destinations = [
     { name: "London", image: "https://res.cloudinary.com/greenmouse-tech/image/upload/v1750805151/feshia%20Images/Flag-United-Kingdom_rv8ion.png" },
@@ -15,8 +15,8 @@ const destinations = [
 const FeaturedDestinations = () => {
     const scrollRef = useRef(null);
 
-    // Desktop settings
-    const DESKTOP_ITEM_WIDTH = 200; 
+    // Desktop settings - exactly 5 items per view
+    const DESKTOP_ITEM_WIDTH = 270; // Reduced from 200 for better fit
     const DESKTOP_ITEMS_PER_SCROLL = 5;
     const DESKTOP_SCROLL_AMOUNT = DESKTOP_ITEM_WIDTH * DESKTOP_ITEMS_PER_SCROLL;
 
@@ -39,7 +39,7 @@ const FeaturedDestinations = () => {
 
     return (
         <div className="w-full px-4 mb-16 relative">
-            <div className="Resizer">
+            <div className="Resizer mx-auto">
                 <div className="flex justify-between items-center mb-12">
                     <h2 className="text-2xl font-semibold">Featured Study Destinations</h2>
                     <a href="#" className="text-[#FD0B0B] text-base underline font-medium hidden md:block">
@@ -50,25 +50,25 @@ const FeaturedDestinations = () => {
                 {/* Desktop Arrows - Hidden on Mobile */}
                 <button
                     onClick={() => scroll("left")}
-                    className="absolute md:left-18 top-1/2 transform -translate-y-1/2 z-10 bg-black cursor-pointer text-white rounded-full p-2 hidden md:block"
+                    className="absolute left-0 md:left-28 top-1/2 transform -translate-y-1/2 z-10 bg-black cursor-pointer text-white rounded-full p-2 hidden md:block hover:bg-gray-800 transition-colors"
                 >
-                    <FaChevronLeft size={16} />
+                    <ChevronLeft size={16} />
                 </button>
 
                 <button
                     onClick={() => scroll("right")}
-                    className="absolute md:right-18 right top-1/2 transform -translate-y-1/2 z-10 bg-black cursor-pointer text-white rounded-full p-2 hidden md:block"
+                    className="absolute right-0 md:right-28 top-1/2 transform -translate-y-1/2 z-10 bg-black cursor-pointer text-white rounded-full p-2 hidden md:block hover:bg-gray-800 transition-colors"
                 >
-                    <FaChevronRight size={16} />
+                    <ChevronRight size={16} />
                 </button>
 
                 {/* Destination Flags */}
                 <div
                     ref={scrollRef}
-                    className="flex gap-4 md:gap-6 overflow-x-auto md:overflow-hidden scrollbar-hide md:px-10 px-2 py-4 scroll-smooth touch-pan-x"
+                    className="flex gap-4 overflow-x-auto md:overflow-hidden scrollbar-hide md:px-6 px-2 scroll-smooth touch-pan-x"
                     style={{
-                        WebkitOverflowScrolling: 'touch', // Smooth scrolling on iOS
-                        scrollSnapType: 'x mandatory', // Snap scrolling
+                        WebkitOverflowScrolling: 'touch',
+                        scrollSnapType: 'x mandatory',
                     }}
                 >
                     {destinations.map((dest, idx) => (
@@ -76,16 +76,16 @@ const FeaturedDestinations = () => {
                             key={idx}
                             className="flex flex-col items-center text-center flex-shrink-0"
                             style={{ 
-                                minWidth: `${MOBILE_ITEM_WIDTH}px`,
+                                minWidth: window.innerWidth >= 768 ? `${DESKTOP_ITEM_WIDTH}px` : `${MOBILE_ITEM_WIDTH}px`,
                                 scrollSnapAlign: 'start'
                             }}
                         >
-                            {/* Mobile: Smaller circular container */}
-                            <div className="w-28 h-28 md:w-full md:h-full rounded-full overflow-hidden">
+                            {/* Controlled image sizes for mobile and desktop */}
+                            <div className="w-28 h-28 md:w-auto md:h-52 rounded-full overflow-hidden">
                                 <img
                                     src={dest.image}
                                     alt={dest.name}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-200"
                                 />
                             </div>
                             <p className="mt-3 md:mt-4 font-medium text-sm text-black">{dest.name}</p>
