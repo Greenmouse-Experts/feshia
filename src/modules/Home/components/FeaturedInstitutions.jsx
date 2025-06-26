@@ -68,8 +68,8 @@ const FeaturedInstitutions = () => {
         <div className="w-full px-4 section">
             <div className="Resizer">
                 <div className="flex justify-between items-center mb-12">
-                    <h2 className="text-2xl text-black font-semibold">Featured Institutions</h2>
-                    <a href="#" className="text-[#ED268F] underline cursor-pointer font-medium text-sm hidden md:block">
+                    <h2 className="text-3xl text-black font-semibold">Featured Institutions</h2>
+                    <a href="#" className="text-[#ED268F] text-3xl underline cursor-pointer font-medium text-sm hidden md:block">
                         View More
                     </a>
                 </div>
@@ -84,25 +84,25 @@ const FeaturedInstitutions = () => {
                             >
                                 <img src={inst.image} alt={inst.title} className="w-full h-50 object-cover" />
                                 <div className="p-6 text-sm">
-                                    <h3 className="font-semibold text-base mb-3">{inst.title}</h3>
-                                    <p className="text-gray-500 mb-3">{inst.location}</p>
+                                    <h3 className="font-semibold text-lg mb-3">{inst.title}</h3>
+                                    <p className="text-gray-500 text-base mb-3">{inst.location}</p>
 
                                     <div className="text-[#ED268F]">
                                         {/* Top row with QS Rank and Scholarship */}
                                         <div className="flex justify-between mb-3">
                                             <div>
-                                                <p className="text-sm">QS Rank</p>
+                                                <p className="text-base">QS Rank</p>
                                                 <p className="font-bold text-black leading-tight">{inst.rank}</p>
                                             </div>
                                             <div>
-                                                <p className="text-sm">Scholarship</p>
+                                                <p className="text-base">Scholarship</p>
                                                 <p className="font-bold text-black leading-tight">{inst.scholarship}</p>
                                             </div>
                                         </div>
 
                                         {/* Bottom row with Intl. Student */}
                                         <div>
-                                            <p className="text-sm">Intl. Student</p>
+                                            <p className="text-base">Intl. Student</p>
                                             <p className="font-bold text-black leading-tight">{inst.students}</p>
                                         </div>
                                     </div>
@@ -122,10 +122,10 @@ const FeaturedInstitutions = () => {
                             {articles.map((article, index) => (
                                 <div key={index} className="flex gap-3 pb-4 border-b border-gray-100 last:border-b-0">
                                     <div className="flex-1 min-w-0">
-                                        <h4 className="font-medium text-sm text-gray-800 leading-tight mb-1 line-clamp-2">
+                                        <h4 className="font-medium text-lg text-gray-800 leading-tight mb-1 line-clamp-2">
                                             {article.title}
                                         </h4>
-                                        <p className="text-xs text-gray-500">
+                                        <p className="text-base text-gray-500">
                                             Posted on {article.date}
                                         </p>
 

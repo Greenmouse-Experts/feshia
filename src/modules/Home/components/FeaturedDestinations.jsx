@@ -41,7 +41,7 @@ const FeaturedDestinations = () => {
         <div className="w-full px-4 mb-16 relative">
             <div className="Resizer mx-auto">
                 <div className="flex justify-between items-center mb-12">
-                    <h2 className="text-2xl font-semibold">Featured Study Destinations</h2>
+                    <h2 className="text-3xl font-semibold">Featured Study Destinations</h2>
                     <a href="#" className="text-[#FD0B0B] text-base underline font-medium hidden md:block">
                         View More
                     </a>
@@ -88,7 +88,7 @@ const FeaturedDestinations = () => {
                                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-200"
                                 />
                             </div>
-                            <p className="mt-3 md:mt-4 font-medium text-sm text-black">{dest.name}</p>
+                            <p className="mt-3 md:mt-4 font-medium text-lg text-black">{dest.name}</p>
                         </div>
                     ))}
                 </div>

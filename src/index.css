@@ -93,8 +93,22 @@ body {
 }
 
 
-/* Firefox scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 16px; /* wider scrollbar track */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1; /* light gray track */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #ec4899; /* Tailwind pink-500 */
+  border-radius: 10px;
+  border: 4px solid #f1f1f1; /* extra padding around thumb for a “thicker” feel */
+}
+
+/* Firefox support */
 .custom-scrollbar {
-  scrollbar-color: #EE79AC #f0f0f0;
-  scrollbar-width: thin;
+  scrollbar-width: auto;
+  scrollbar-color: #ec4899 #f1f1f1;
 }

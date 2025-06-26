@@ -12,7 +12,7 @@ const FeaturedCourses = () => {
     return (
         <div className="Resizer mx-auto section px-4">
             <div className="flex justify-between items-center mb-12">
-                <h2 className="text-2xl font-bold text-gray-900">Featured Courses</h2>
+                <h2 className="text-3xl font-bold text-gray-900">Featured Courses</h2>
                 <a
                         href="#"
                         className="text-[#FD0B0B] text-base underline font-medium hidden md:block"
@@ -36,7 +36,7 @@ const FeaturedCourses = () => {
                                 </div>
                             )}
                         </div>
-                        <p className="text-gray-800 text-base mt-3 font-medium">{course.title}</p>
+                        <p className="text-gray-800 text-lg mt-3 font-medium">{course.title}</p>
                     </div>
                 ))}
             </div>
