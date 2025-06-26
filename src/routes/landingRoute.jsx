@@ -1,5 +1,9 @@
 import LandingLayout from "../layouts/landing";
 import LandingHomepage from "../modules/Home";
+import AboutUs from "../modules/Home/About";
+import ConsultationForm from "../modules/Home/Consultant";
+import WhatWeDo from "../modules/Home/WhatWeDo";
+import BookAnApppointment from "../modules/Home/BookApppointment";
 export const landingRooutes = [
   {
     path: "/",
@@ -8,6 +12,22 @@ export const landingRooutes = [
       {
         index: true,
         element: <LandingHomepage />,
+      },
+      {
+        path: 'about',
+        element: <AboutUs />,
+      },
+      {
+        path: 'consultant',
+        element: <ConsultationForm />,
+      },
+      {
+        path: 'what-we-do',
+        element: <WhatWeDo />,
+      },
+      {
+        path: 'book-appointment',
+        element: <BookAnApppointment />,
       },
     ],
   },

@@ -10,7 +10,7 @@ const FeaturedCourses = () => {
     ];
 
     return (
-        <div className="Resizer mx-auto section  px-4">
+        <div className="Resizer mx-auto section px-4">
             <div className="flex justify-between items-center mb-12">
                 <h2 className="text-2xl font-bold text-gray-900">Featured Courses</h2>
                 <a
