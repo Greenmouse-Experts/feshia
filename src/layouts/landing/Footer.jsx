@@ -111,7 +111,7 @@ const Footer = () => {
 
                         </div>
 
-                        <div className="w-full md:w-auto -mt-20 flex justify-center md:justify-end">
+                        <div className="w-full md:w-auto -mt-10 flex justify-center md:justify-end">
                             <Link to="/">
                                 <img
                                     src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1750848536/feshia%20Images/Frame_1_puzgs4.png"
