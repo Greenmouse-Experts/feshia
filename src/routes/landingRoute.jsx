@@ -4,6 +4,7 @@ import AboutUs from "../modules/Home/About";
 import ConsultationForm from "../modules/Home/Consultant";
 import WhatWeDo from "../modules/Home/WhatWeDo";
 import BookAnApppointment from "../modules/Home/BookApppointment";
+import StudentAnBlog from "../modules/Home/StudentBlog";
 export const landingRooutes = [
   {
     path: "/",
@@ -28,6 +29,10 @@ export const landingRooutes = [
       {
         path: 'book-appointment',
         element: <BookAnApppointment />,
+      },
+      {
+        path: 'student-blog',
+        element: <StudentAnBlog />,
       },
     ],
   },

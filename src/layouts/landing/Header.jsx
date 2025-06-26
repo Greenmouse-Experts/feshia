@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ChevronDownIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 
@@ -14,6 +14,14 @@ const NavBar = () => {
     institution: false,
     resources: false,
   });
+
+  // Refs for dropdown elements
+  const studentRef = useRef(null);
+  const institutionRef = useRef(null);
+  const resourcesRef = useRef(null);
+  const mobileStudentRef = useRef(null);
+  const mobileInstitutionRef = useRef(null);
+  const mobileResourcesRef = useRef(null);
 
   const toggleDropdown = (key) => {
     setDropdownOpen((prev) => ({
@@ -41,6 +49,35 @@ const NavBar = () => {
     }
   };
 
+  // Handle click outside dropdowns to close them
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (studentRef.current && !studentRef.current.contains(event.target)) {
+        setDropdownOpen((prev) => ({ ...prev, student: false }));
+      }
+      if (institutionRef.current && !institutionRef.current.contains(event.target)) {
+        setDropdownOpen((prev) => ({ ...prev, institution: false }));
+      }
+      if (resourcesRef.current && !resourcesRef.current.contains(event.target)) {
+        setDropdownOpen((prev) => ({ ...prev, resources: false }));
+      }
+      if (mobileStudentRef.current && !mobileStudentRef.current.contains(event.target)) {
+        setMobileDropdownOpen((prev) => ({ ...prev, student: false }));
+      }
+      if (mobileInstitutionRef.current && !mobileInstitutionRef.current.contains(event.target)) {
+        setMobileDropdownOpen((prev) => ({ ...prev, institution: false }));
+      }
+      if (mobileResourcesRef.current && !mobileResourcesRef.current.contains(event.target)) {
+        setMobileDropdownOpen((prev) => ({ ...prev, resources: false }));
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    // Cleanup event listener on component unmount
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <nav className="sticky z-50 ">
       <div className="Resizer">
@@ -61,7 +98,7 @@ const NavBar = () => {
           <div className="hidden md:flex items-center  md:space-x-8 xl:px-8 md:px-8 py-4 rounded-md bg-black/50 text-white xl:ml-24">
             <Link to="/about" className="text-sm font-medium hover:text-pink-500 transition">About Us</Link>
 
-            <div className="relative">
+            <div className="relative" ref={studentRef}>
               <button
                 onClick={() => toggleDropdown('student')}
                 className="flex items-center gap-1 text-sm font-medium hover:text-pink-500 transition"
@@ -69,7 +106,6 @@ const NavBar = () => {
                 For Student <ChevronDownIcon className="w-4 h-4" />
               </button>
               {dropdownOpen.student && (
-
                 <div className="absolute left-0 mt-2 w-38 bg-white text-black rounded-md shadow-lg z-10">
                   <Link to="/what-we-do" className="block px-4 py-2 text-sm hover:bg-gray-100">
                     What we do
@@ -81,11 +117,10 @@ const NavBar = () => {
                     Student Blog
                   </Link>
                 </div>
-
               )}
             </div>
 
-            <div className="relative">
+            <div className="relative" ref={institutionRef}>
               <button
                 onClick={() => toggleDropdown('institution')}
                 className="flex items-center gap-1 text-sm font-medium hover:text-pink-500 transition"
@@ -104,13 +139,12 @@ const NavBar = () => {
                     Institution Blog
                   </Link>
                 </div>
-
               )}
             </div>
 
             <a href="#" className="text-sm font-medium hover:text-pink-500 transition">Events</a>
 
-            <div className="relative">
+            <div className="relative" ref={resourcesRef}>
               <button
                 onClick={() => toggleDropdown('resources')}
                 className="flex items-center gap-1 text-sm font-medium hover:text-pink-500 transition"
@@ -123,7 +157,6 @@ const NavBar = () => {
                   <Link to="#" className="block px-4 py-2 text-sm hover:bg-gray-100">Our App</Link>
                   <Link to="#" className="block px-4 py-2 text-sm hover:bg-gray-100">Videos</Link>
                 </div>
-
               )}
             </div>
           </div>
@@ -136,7 +169,6 @@ const NavBar = () => {
             >
               Talk to a Consultant
             </Link>
-
           </div>
 
           {/* Mobile Menu Button */}
@@ -157,7 +189,7 @@ const NavBar = () => {
           <div className="fixed right-0 top-0 w-72 bg-white text-black h-full overflow-y-auto shadow-lg">
             {/* Mobile Menu Header with Logo */}
             <div className="flex items-center justify-between p-6 border-b border-gray-200">
-              <Link to="/" onClick={toggleMobileMenu}>
+              <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>
                 <img
                   src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1750848536/feshia%20Images/Frame_1_puzgs4.png"
                   alt="Feshia"
@@ -165,19 +197,19 @@ const NavBar = () => {
                   draggable="false"
                 />
               </Link>
-              <button onClick={toggleMobileMenu}>
+              <button onClick={() => setIsMobileMenuOpen(false)}>
                 <XMarkIcon className="h-6 w-6 text-black" />
               </button>
             </div>
 
             {/* Mobile Menu Content */}
             <div className="p-6 flex flex-col gap-4">
-              <a href="#" className="text-gray-800 font-medium py-2 hover:text-pink-600 transition">
+              <a href="#" className="text-gray-800 font-medium py-2 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                 About Us
               </a>
 
               {/* For Student Dropdown */}
-              <div>
+              <div ref={mobileStudentRef}>
                 <button
                   onClick={() => toggleMobileDropdown('student')}
                   className="flex items-center justify-between w-full text-gray-800 font-medium py-2 hover:text-pink-600 transition"
@@ -187,22 +219,21 @@ const NavBar = () => {
                 </button>
                 {mobileDropdownOpen.student && (
                   <div className="ml-4 mt-2 flex flex-col gap-2">
-                    <Link to="/what-we-do" className="text-gray-600 py-1 hover:text-pink-600 transition">
+                    <Link to="/what-we-do" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       What we do
                     </Link>
-                    <Link to="/book-appointment" className="text-gray-600 py-1 hover:text-pink-600 transition">
+                    <Link to="/book-appointment" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       Book an Appointment
                     </Link>
-                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition">
+                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       Student Blog
                     </Link>
                   </div>
-
                 )}
               </div>
 
               {/* For Institution Dropdown */}
-              <div>
+              <div ref={mobileInstitutionRef}>
                 <button
                   onClick={() => toggleMobileDropdown('institution')}
                   className="flex items-center justify-between w-full text-gray-800 font-medium py-2 hover:text-pink-600 transition"
@@ -212,26 +243,25 @@ const NavBar = () => {
                 </button>
                 {mobileDropdownOpen.institution && (
                   <div className="ml-4 mt-2 flex flex-col gap-2">
-                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition">
+                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       Why Feshia
                     </Link>
-                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition">
+                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       Partner with Feshia
                     </Link>
-                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition">
+                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       Institution Blog
                     </Link>
                   </div>
-
                 )}
               </div>
 
-              <a href="#" className="text-gray-800 font-medium py-2 hover:text-pink-600 transition">
+              <a href="#" className="text-gray-800 font-medium py-2 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                 Events
               </a>
 
               {/* Resources Dropdown */}
-              <div>
+              <div ref={mobileResourcesRef}>
                 <button
                   onClick={() => toggleMobileDropdown('resources')}
                   className="flex items-center justify-between w-full text-gray-800 font-medium py-2 hover:text-pink-600 transition"
@@ -241,17 +271,16 @@ const NavBar = () => {
                 </button>
                 {mobileDropdownOpen.resources && (
                   <div className="ml-4 mt-2 flex flex-col gap-2">
-                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition">
+                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       FAQs
                     </Link>
-                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition">
+                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       Our App
                     </Link>
-                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition">
+                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       Videos
                     </Link>
                   </div>
-
                 )}
               </div>
 
@@ -260,11 +289,10 @@ const NavBar = () => {
                 <Link
                   to="/consultant"
                   className="block w-full bg-pink-600 text-white px-4 py-3 rounded-md text-sm font-medium hover:bg-pink-700 transition text-center"
-                  onClick={toggleMobileMenu}
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Talk to a Consultant
                 </Link>
-
               </div>
             </div>
           </div>
