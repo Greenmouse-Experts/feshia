@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const SearchBar = ({ bgImageUrl }) => {
     return (
@@ -28,9 +30,11 @@ const SearchBar = ({ bgImageUrl }) => {
                 <button className="bg-[#ED268F] text-white px-14 py-3 cursor-pointer rounded-md font-medium transition">
                     Search
                 </button>
-                <button className="bg-[#ED268F] text-white px-6 py-3 cursor-pointer rounded-md font-medium transition">
-                    Talk to a Consultant
-                </button>
+                <Link to="/consultant">
+                    <button className="bg-[#ED268F] text-white px-6 py-3 cursor-pointer rounded-md font-medium transition">
+                        Talk to a Consultant
+                    </button>
+                </Link>
             </div>
         </div>
     );
