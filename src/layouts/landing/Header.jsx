@@ -113,7 +113,7 @@ const NavBar = () => {
                   <Link to="/book-appointment" className="block px-4 py-2 text-sm hover:bg-gray-100">
                     Book an Appointment
                   </Link>
-                  <Link to="#" className="block px-4 py-2 text-sm hover:bg-gray-100">
+                  <Link to="/student-blog" className="block px-4 py-2 text-sm hover:bg-gray-100">
                     Student Blog
                   </Link>
                 </div>
@@ -225,7 +225,7 @@ const NavBar = () => {
                     <Link to="/book-appointment" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       Book an Appointment
                     </Link>
-                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link to="/student-blog" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       Student Blog
                     </Link>
                   </div>
