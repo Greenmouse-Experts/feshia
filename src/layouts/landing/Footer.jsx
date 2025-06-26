@@ -51,13 +51,15 @@ const Footer = () => {
                         <div className="col-span-1">
                             <h3 className="text-white text-lg font-bold mb-4">COMPANY</h3>
                             <ul className="space-y-4 text-base">
-                                <li>About Us</li>
-                                <li>For Student</li>
-                                <li>For Institution</li>
-                                <li>Resources</li>
-                                <li>Events</li>
-                                <li>Apply Now</li>
+                                <li><Link to="/about">About Us</Link></li>
+                                <li><Link to="/student-blog">For Student</Link></li>
+                                <li><Link to="#">For Institution</Link></li>
+                                <li><Link to="#">Resources</Link></li>
+                                <li><Link to="#">Events</Link></li>
+                                <li><Link to="#">Apply Now</Link></li>
                             </ul>
+                            ⁠
+
                         </div>
 
                         {/* QUICK LINKS */}
@@ -106,7 +108,7 @@ const Footer = () => {
                                     <PaperAirplaneIcon className="w-5 h-5 transform rotate-45" />
                                 </button>
                             </form>
-                            
+
                         </div>
 
                         <div className="w-full md:w-auto -mt-20 flex justify-center md:justify-end">
