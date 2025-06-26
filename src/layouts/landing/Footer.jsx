@@ -90,7 +90,7 @@ const Footer = () => {
 
 
                     {/* Newsletter Section */}
-                    <div className="Resizer flex flex-col md:flex-row justify-between items-center w-full hidden md:block">
+                    <div className="Resizer flex-col md:flex-row justify-between items-center w-full hidden md:block">
                         <div className="w-full md:w-1/3 mb-6 md:mb-0">
                             <h3 className="text-white text-base md:text-base font-bold mb-3">NEWSLETTER</h3>
                             <form className="flex">
@@ -106,14 +106,15 @@ const Footer = () => {
                                     <PaperAirplaneIcon className="w-5 h-5 transform rotate-45" />
                                 </button>
                             </form>
+                            
                         </div>
 
-                        <div className="w-full md:w-auto flex justify-center md:justify-end">
+                        <div className="w-full md:w-auto -mt-20 flex justify-center md:justify-end">
                             <Link to="/">
                                 <img
                                     src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1750848536/feshia%20Images/Frame_1_puzgs4.png"
                                     alt="Feshia"
-                                    className="h-16 hidden md:block"
+                                    className="h-16 w-auto"
                                     draggable="false"
                                 />
                             </Link>
