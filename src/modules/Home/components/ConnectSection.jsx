@@ -3,7 +3,7 @@ import React from 'react';
 const ConnectSection = ({ leftImageUrl, rightImageUrl }) => {
     return (
         <div
-            className="w-full h-[250px] md:h-[400px] section flex flex-col md:flex-row items-center justify-between px-4"
+            className="w-full h-[300px] md:h-[400px] section flex flex-col md:flex-row items-center justify-between px-4"
             style={{
                 backgroundImage: leftImageUrl ? `url(${leftImageUrl})` : 'none',
                 backgroundSize: 'cover',

@@ -40,6 +40,14 @@ const FeaturedCourses = () => {
                     </div>
                 ))}
             </div>
+            <div className="mt-8 text-center">
+                <a
+                    href="#"
+                    className="text-[#FD0B0B] text-base underline font-medium md:hidden"
+                >
+                    View All
+                </a>
+            </div>
         </div>
     );
 };
