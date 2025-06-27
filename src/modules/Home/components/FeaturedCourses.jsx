@@ -29,7 +29,6 @@ const FeaturedCourses = () => {
                         className="bg-white border border-pink-200 rounded-lg p-4 flex flex-col items-center text-center hover:shadow-lg transition-shadow"
                     >
                         <div className="w-16 h-16 mb-4">
-                            {/* Placeholder for image - replace with your image URL */}
                             {course.image ? (
                                 <img src={course.image} alt={course.title} className="w-full h-full object-contain" />
                             ) : (
