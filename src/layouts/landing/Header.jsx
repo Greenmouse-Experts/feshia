@@ -8,6 +8,7 @@ const NavBar = () => {
     student: false,
     institution: false,
     resources: false,
+    about: false,
   });
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState({
     student: false,
@@ -19,6 +20,7 @@ const NavBar = () => {
   const studentRef = useRef(null);
   const institutionRef = useRef(null);
   const resourcesRef = useRef(null);
+  const aboutRef = useRef(null);
   const mobileStudentRef = useRef(null);
   const mobileInstitutionRef = useRef(null);
   const mobileResourcesRef = useRef(null);
@@ -58,6 +60,9 @@ const NavBar = () => {
       if (institutionRef.current && !institutionRef.current.contains(event.target)) {
         setDropdownOpen((prev) => ({ ...prev, institution: false }));
       }
+      if (aboutRef.current && !aboutRef.current.contains(event.target)) {
+        setDropdownOpen((prev) => ({ ...prev, about: false }));
+      }
       if (resourcesRef.current && !resourcesRef.current.contains(event.target)) {
         setDropdownOpen((prev) => ({ ...prev, resources: false }));
       }
@@ -95,8 +100,28 @@ const NavBar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center  md:space-x-8 xl:px-8 md:px-8 py-4 rounded-md bg-black/50 text-white xl:ml-24">
-            <Link to="/about" className="text-sm font-medium hover:text-pink-500 transition">About Us</Link>
+          <div className="hidden md:flex items-center  md:space-x-8 md:px-8 py-4 rounded-md bg-black/50 text-white">
+            {/* <Link to="/" className="text-sm font-medium hover:text-pink-500 transition">Home</Link> */}
+            <div className="relative" ref={aboutRef}>
+              <button
+                onClick={() => toggleDropdown('about')}
+                className="flex items-center gap-1 text-sm font-medium hover:text-pink-500 transition"
+              >
+                About Us <ChevronDownIcon className="w-4 h-4" />
+              </button>
+              {dropdownOpen.about && (
+                <div className="absolute left-0 mt-2 w-44 bg-white text-black rounded-md shadow-lg z-10">
+                  <Link to="/about" className="block px-4 py-2 text-sm hover:bg-gray-100">Our Story</Link>
+                  <Link to="/what-we-do" className="block px-4 py-2 text-sm hover:bg-gray-100">
+                    What we do
+                  </Link>
+                  <Link to="#" className="block px-4 py-2 text-sm hover:bg-gray-100">
+                    Why Feshia
+                  </Link>
+                </div>
+              )}
+            </div>
+            
 
             <div className="relative" ref={studentRef}>
               <button
@@ -107,9 +132,6 @@ const NavBar = () => {
               </button>
               {dropdownOpen.student && (
                 <div className="absolute left-0 mt-2 w-38 bg-white text-black rounded-md shadow-lg z-10">
-                  <Link to="/what-we-do" className="block px-4 py-2 text-sm hover:bg-gray-100">
-                    What we do
-                  </Link>
                   <Link to="/book-appointment" className="block px-4 py-2 text-sm hover:bg-gray-100">
                     Book an Appointment
                   </Link>
@@ -129,9 +151,6 @@ const NavBar = () => {
               </button>
               {dropdownOpen.institution && (
                 <div className="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg z-10">
-                  <Link to="#" className="block px-4 py-2 text-sm hover:bg-gray-100">
-                    Why Feshia
-                  </Link>
                   <Link to="#" className="block px-4 py-2 text-sm hover:bg-gray-100">
                     Partner with Feshia
                   </Link>
@@ -154,11 +173,14 @@ const NavBar = () => {
               {dropdownOpen.resources && (
                 <div className="absolute left-0 mt-2 w-28 bg-white text-black rounded-md shadow-lg z-10">
                   <Link to="#" className="block px-4 py-2 text-sm hover:bg-gray-100">FAQs</Link>
-                  <Link to="#" className="block px-4 py-2 text-sm hover:bg-gray-100">Our App</Link>
-                  <Link to="#" className="block px-4 py-2 text-sm hover:bg-gray-100">Videos</Link>
+                  {/* <Link to="#" className="block px-4 py-2 text-sm hover:bg-gray-100">Our App</Link>
+                  <Link to="#" className="block px-4 py-2 text-sm hover:bg-gray-100">Videos</Link> */}
                 </div>
               )}
             </div>
+
+            <Link to="#" className="text-sm font-medium hover:text-pink-500 transition">Gallery</Link>
+            <Link to="#" className="text-sm font-medium hover:text-pink-500 transition">Contact Us</Link>
           </div>
 
           {/* Consultant Button */}

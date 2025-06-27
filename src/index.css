@@ -63,6 +63,12 @@ body {
     }
   }
 
+  @media (min-width: 1300px) {
+    .Resizer {
+      width: 1266px;
+    }
+  }
+
   @media (min-width: 1600px) {
     .Resizer {
       width: 1460px;
