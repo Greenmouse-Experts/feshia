@@ -4,6 +4,7 @@ import FeaturedInstitutions from './components/FeaturedInstitutions';
 import FeaturedDestinations from './components/FeaturedDestinations';
 import FeaturedCourses from './components/FeaturedCourses';
 import ConnectSection from './components/ConnectSection';
+import HowItWorkForUs from './components/HowItWork';
 export default function NewHome() {
     const bgImageUrl = 'https://res.cloudinary.com/greenmouse-tech/image/upload/v1750802183/feshia%20Images/6722f625c6344416c1d2d5cdb77f842a_dyvvfz.jpg';
     const leftImageUrl = 'https://res.cloudinary.com/greenmouse-tech/image/upload/v1750852319/feshia%20Images/Group_1171275186_1_kgiz4s.jpg';
@@ -12,6 +13,7 @@ export default function NewHome() {
         <>
             <BannerWithForm />
             <SearchBar bgImageUrl={bgImageUrl} />
+            <HowItWorkForUs />
             <FeaturedInstitutions />
             <FeaturedDestinations />
             <ConnectSection leftImageUrl={leftImageUrl} rightImageUrl={rightImageUrl} />

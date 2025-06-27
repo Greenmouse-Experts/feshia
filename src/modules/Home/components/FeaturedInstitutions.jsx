@@ -65,7 +65,7 @@ const articles = [
 
 const FeaturedInstitutions = () => {
     return (
-        <div className="w-full px-4 section">
+        <div className="w-full px-4 only-bottom">
             <div className="Resizer">
                 <div className="flex justify-between items-center mb-12">
                     <h2 className="text-3xl text-black font-semibold">Featured Institutions</h2>
