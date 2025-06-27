@@ -19,59 +19,42 @@ body {
 }
 @layer components {
   .Resizer {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    @apply w-full px-[15px] mx-auto;
   }
-  
 
   @media (min-width: 576px) {
     .Resizer {
-      width: 500px;
+      max-width: 540px;
     }
   }
 
   @media (min-width: 768px) {
     .Resizer {
-      width: 720px;
-    }
-  }
-
-  @media (min-width: 958px) {
-    .Resizer {
-      width: 880px;
+      max-width: 720px;
     }
   }
 
   @media (min-width: 992px) {
     .Resizer {
-      width: 960px;
+      max-width: 960px;
     }
   }
 
   @media (min-width: 1200px) {
     .Resizer {
-      width: 1140px;
+      max-width: 1140px;
     }
   }
 
   @media (min-width: 1400px) {
     .Resizer {
-      width: 1360px;
-    }
-  }
-
-  @media (min-width: 1300px) {
-    .Resizer {
-      width: 1266px;
+      max-width: 1320px;
     }
   }
 
   @media (min-width: 1600px) {
     .Resizer {
-      width: 1460px;
+      max-width: 1440px;
     }
   }
 
@@ -93,11 +76,9 @@ body {
     }
   }
   .bg-gradient {
-    background: linear-gradient(92.49deg, #9E4BFA -14.1%, #EE79AC 111.07%);
-  }  
-
+    background: linear-gradient(92.49deg, #9e4bfa -14.1%, #ee79ac 111.07%);
+  }
 }
-
 
 .custom-scrollbar::-webkit-scrollbar {
   width: 16px; /* wider scrollbar track */

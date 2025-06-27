@@ -91,7 +91,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <nav className="sticky z-50 ">
+    <nav className="sticky z-50">
       <div className="Resizer">
         <div className="sm:px-6 flex items-center justify-between h-16 py-10 relative">
           {/* Logo */}
@@ -107,8 +107,7 @@ const NavBar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center  md:space-x-8 md:px-8 py-4 rounded-md bg-black/50 text-white">
-            {/* <Link to="/" className="text-sm font-medium hover:text-pink-500 transition">Home</Link> */}
+          <div className="hidden lg:flex items-center md:space-x-8 md:px-8 py-4 rounded-md bg-black/50 text-white">
             <div className="relative" ref={aboutRef}>
               <button
                 onClick={() => toggleDropdown('about')}
@@ -188,7 +187,7 @@ const NavBar = () => {
           </div>
 
           {/* Consultant Button */}
-          <div className="hidden md:flex">
+          <div className="hidden lg:flex">
             <Link
               to="/consultant"
               className="bg-pink-600 text-white px-4 py-3 rounded-md text-sm font-medium hover:bg-pink-700 transition"
@@ -198,7 +197,7 @@ const NavBar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={toggleMobileMenu}
               className="text-pink-600 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium"

@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="Resizer mx-auto">
                 {/* Desktop Layout */}
                 <div className="px-4">
-                    <div className="hidden md:grid md:grid-cols-5 gap-8 mb-8">
+                    <div className="hidden md:grid lg:grid-cols-5 md:grid-cols-3 gap-8 mb-8">
                         {/* CONTACT */}
                         <div className="col-span-2">
                             <h3 className="text-white text-lg font-bold mb-4">CONTACT</h3>

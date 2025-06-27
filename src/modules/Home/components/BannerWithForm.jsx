@@ -58,7 +58,7 @@ const Banner = () => {
   }, [formShownOnce]);
 
   return (
-    <div className="relative w-full h-[450px] -mt-20 md:h-[770px] overflow-hidden flex">
+    <div className="relative w-full h-[450px] -mt-20 lg:h-[700px] md:h-[470px] overflow-hidden flex">
       {/* Background Image */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -134,11 +134,11 @@ const Banner = () => {
                 Please provide your details to continue using Feshia
               </p>
 
-              <form className="space-y-4">
+              <form className="space-y-2">
                 <div>
                   <label className="block text-sm mb-2 font-medium text-gray-700">Full Name</label>
                   <input
-                    className="w-full p-3 border-1 border-pink-400 outline-none rounded-md placeholder-gray-400"
+                    className="w-full p-2 border-1 border-pink-400 outline-none rounded-md placeholder-gray-400"
                     placeholder="Enter Your Name"
                   />
                 </div>
@@ -146,7 +146,7 @@ const Banner = () => {
                 <div>
                   <label className="block text-sm mb-2 font-medium text-gray-700">Email</label>
                   <input
-                    className="w-full p-3 border-1 border-pink-400 outline-none rounded-md placeholder-gray-400"
+                    className="w-full p-2 border-1 border-pink-400 outline-none rounded-md placeholder-gray-400"
                     placeholder="Enter Your Email"
                   />
                 </div>
@@ -154,7 +154,7 @@ const Banner = () => {
                 <div>
                   <label className="block text-sm mb-2 font-medium text-gray-700">Phone</label>
                   <input
-                    className="w-full p-3 border-1 border-pink-400 outline-none rounded-md placeholder-gray-400"
+                    className="w-full p-2 border-1 border-pink-400 outline-none rounded-md placeholder-gray-400"
                     placeholder=""
                   />
                 </div>
@@ -162,7 +162,7 @@ const Banner = () => {
                 <div>
                   <label className="block text-sm mb-2 font-medium text-gray-700">Preferred Study Destination</label>
                   <input
-                    className="w-full p-3 border-1 border-pink-400 outline-none rounded-md placeholder-gray-400"
+                    className="w-full p-2 border-1 border-pink-400 outline-none rounded-md placeholder-gray-400"
                     placeholder="Q1(Jan-Mar)"
                   />
                 </div>
@@ -171,14 +171,14 @@ const Banner = () => {
                   <div>
                     <label className="block text-sm mb-2 font-medium text-gray-700">Preferred study Year</label>
                     <input
-                      className="w-full p-3 border-1 border-pink-400 outline-none rounded-md placeholder-gray-400"
+                      className="w-full p-2 border-1 border-pink-400 outline-none rounded-md placeholder-gray-400"
                       placeholder="2025"
                     />
                   </div>
                   <div>
                     <label className="block text-sm mb-2 font-medium text-gray-700">Preferred study Year</label>
                     <input
-                      className="w-full p-3 border-1 border-pink-400 outline-none rounded-md placeholder-gray-400"
+                      className="w-full p-2 border-1 border-pink-400 outline-none rounded-md placeholder-gray-400"
                       placeholder="Q1(Jan-Mar)"
                     />
                   </div>
@@ -186,7 +186,7 @@ const Banner = () => {
 
                 <button
                   type="submit"
-                  className="bg-pink-500 hover:bg-pink-600 w-full py-3 rounded-md text-white font-medium mt-4"
+                  className="bg-pink-500 hover:bg-pink-600 w-full py-2 rounded-md text-white font-medium mt-4"
                 >
                   Submit
                 </button>
