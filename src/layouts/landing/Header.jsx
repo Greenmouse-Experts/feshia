@@ -14,6 +14,7 @@ const NavBar = () => {
     student: false,
     institution: false,
     resources: false,
+    about: false,
   });
 
   // Refs for dropdown elements
@@ -22,6 +23,7 @@ const NavBar = () => {
   const resourcesRef = useRef(null);
   const aboutRef = useRef(null);
   const mobileStudentRef = useRef(null);
+  const mobileAboutRef = useRef(null);
   const mobileInstitutionRef = useRef(null);
   const mobileResourcesRef = useRef(null);
 
@@ -47,6 +49,7 @@ const NavBar = () => {
         student: false,
         institution: false,
         resources: false,
+        about: false,
       });
     }
   };
@@ -68,6 +71,10 @@ const NavBar = () => {
       }
       if (mobileStudentRef.current && !mobileStudentRef.current.contains(event.target)) {
         setMobileDropdownOpen((prev) => ({ ...prev, student: false }));
+      }
+
+      if (mobileAboutRef.current && !mobileAboutRef.current.contains(event.target)) {
+        setMobileDropdownOpen((prev) => ({ ...prev, about: false }));
       }
       if (mobileInstitutionRef.current && !mobileInstitutionRef.current.contains(event.target)) {
         setMobileDropdownOpen((prev) => ({ ...prev, institution: false }));
@@ -121,7 +128,7 @@ const NavBar = () => {
                 </div>
               )}
             </div>
-            
+
 
             <div className="relative" ref={studentRef}>
               <button
@@ -223,9 +230,33 @@ const NavBar = () => {
 
             {/* Mobile Menu Content */}
             <div className="p-6 flex flex-col gap-4">
-              <a href="#" className="text-gray-800 font-medium py-2 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
+              {/* <a href="#" className="text-gray-800 font-medium py-2 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                 About Us
-              </a>
+              </a> */}
+
+              {/* For  About Us Dropdown */}
+              <div ref={mobileAboutRef}>
+                <button
+                  onClick={() => toggleMobileDropdown('about')}
+                  className="flex items-center justify-between w-full text-gray-800 font-medium py-2 hover:text-pink-600 transition"
+                >
+                  About Us
+                  <ChevronDownIcon className={`w-4 h-4 transition-transform ${mobileDropdownOpen.about ? 'rotate-180' : ''}`} />
+                </button>
+                {mobileDropdownOpen.about && (
+                  <div className="ml-4 mt-2 flex flex-col gap-2">
+                    <Link to="/about" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
+                      Our Story
+                    </Link>
+                    <Link to="/what-we-do" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
+                      What we do
+                    </Link>
+                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
+                      Why Feshia
+                    </Link>
+                  </div>
+                )}
+              </div>
 
               {/* For Student Dropdown */}
               <div ref={mobileStudentRef}>
@@ -238,9 +269,6 @@ const NavBar = () => {
                 </button>
                 {mobileDropdownOpen.student && (
                   <div className="ml-4 mt-2 flex flex-col gap-2">
-                    <Link to="/what-we-do" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
-                      What we do
-                    </Link>
                     <Link to="/book-appointment" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       Book an Appointment
                     </Link>
@@ -262,9 +290,7 @@ const NavBar = () => {
                 </button>
                 {mobileDropdownOpen.institution && (
                   <div className="ml-4 mt-2 flex flex-col gap-2">
-                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
-                      Why Feshia
-                    </Link>
+
                     <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       Partner with Feshia
                     </Link>
