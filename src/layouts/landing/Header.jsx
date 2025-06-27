@@ -178,9 +178,6 @@ const NavBar = () => {
                 </div>
               )}
             </div>
-
-            <Link to="#" className="text-sm font-medium hover:text-pink-500 transition">Gallery</Link>
-            <Link to="#" className="text-sm font-medium hover:text-pink-500 transition">Contact Us</Link>
           </div>
 
           {/* Consultant Button */}
