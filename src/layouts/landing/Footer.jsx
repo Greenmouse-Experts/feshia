@@ -7,6 +7,7 @@ const Footer = () => {
     return (
         <footer className="bg-black text-white only-top px-4">
             <div className="Resizer mx-auto">
+                
                 {/* Desktop Layout */}
                 <div className="px-4">
                     <div className="hidden md:grid lg:grid-cols-5 md:grid-cols-3 gap-8 mb-8">
@@ -127,7 +128,6 @@ const Footer = () => {
                     </div>
                 </div>
 
-
                 {/* Mobile Layout */}
                 <div className="md:hidden">
                     <div className="space-y-8">
@@ -232,7 +232,6 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-
                         <div className="flex flex-col items-center justify-center mt-8 text-center">
                             <p className="text-base mt-4">©️ {new Date().getFullYear()} Feshia, All Rights Reserved</p>
                         </div>
