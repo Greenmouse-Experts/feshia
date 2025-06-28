@@ -204,33 +204,37 @@ const Footer = () => {
                             </ul>
                         </div>
 
-                        <div className="w-full md:w-1/3 mb-6 md:mb-0">
+                        <div className="items-center justify-center md:flex">
+                        <div className="bg-[#333] p-6 rounded-md w-full max-w-md sm:max-w-lg flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0 sm:space-x-6">
+                            {/* Left: Newsletter Form */}
+                            <div className="flex-1 w-full">
                             <h3 className="text-white text-base md:text-base font-bold mb-3">NEWSLETTER</h3>
-                            <form className="flex">
-                                <input
-                                    type="email"
-                                    placeholder="Enter your Email"
-                                    className="p-4 w-full text-xs bg-white rounded-l-sm italic text-black outline-none"
-                                />
-                                <button
-                                    type="submit"
-                                    className="bg-pink-600 hover:bg-pink-700 text-white px-4 flex items-center justify-center rounded-r-sm"
-                                >
-                                    <PaperAirplaneIcon className="w-5 h-5 transform rotate-45" />
-                                </button>
-                            </form>
-                        </div>
+                                <form action="">
+                                    <input
+                                        type="email"
+                                        placeholder="Enter your Email"
+                                        className="p-4 w-full text-xs bg-white rounded mb-3 italic text-black outline-none" required
+                                    />
+                                    <button type="submit" className="w-full bg-[#ED268F] hover:bg-pink-600 cursor-pointer text-white text-sm font-semibold py-2 rounded-md transition duration-300">
+                                        Send
+                                    </button>
+                                </form>
+                            </div>
 
-                        <div className="flex flex-col items-center justify-center mt-8 text-center">
-                            <Link to="/">
+                            {/* Right: Logo */}
+                            <div className="flex-shrink-0 ">
                                 <img
                                     src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1750848536/feshia%20Images/Frame_1_puzgs4.png"
-                                    alt="Feshia"
-                                    className="h-20 w-auto"
+                                    alt="Feshia Logo"
+                                    className="h-20"
                                     draggable="false"
                                 />
-                            </Link>
-                            <p className="text-sm mt-4">©️ {new Date().getFullYear()} Feshia, All Rights Reserved</p>
+                            </div>
+                        </div>
+                    </div>
+
+                        <div className="flex flex-col items-center justify-center mt-8 text-center">
+                            <p className="text-base mt-4">©️ {new Date().getFullYear()} Feshia, All Rights Reserved</p>
                         </div>
                     </div>
                 </div>

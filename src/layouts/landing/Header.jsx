@@ -197,14 +197,46 @@ const NavBar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
+          <div className="md:hidden">
             <button
               onClick={toggleMobileMenu}
-              className="text-pink-600 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium"
+              className="bg-[#ED268F] text-white py-2 px-2 rounded-full flex items-center gap-2"
             >
-              {isMobileMenuOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
+              {isMobileMenuOpen ? (
+                // Close icon (XMarkIcon or any SVG you prefer)
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className="w-7 h-7"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              ) : (
+                // Your custom hamburger SVG
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  className="w-7 h-7 stroke-black"
+                >
+                  <path
+                    d="M4 6h16M4 12h16M4 18h16"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              )}
             </button>
           </div>
+
         </div>
       </div>
 
