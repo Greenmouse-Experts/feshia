@@ -36,7 +36,7 @@ const WhatWeDo = () => {
                         </div>
                         <div className="bg-[#EFEBEB] p-4 rounded-tl-[50%] rounded-tr-[50%] text-center">
                             <div className="w-full h-auto mb-4">
-                                <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1750957970/feshia%20Images/4_wifqyz.png" alt="Visa processing" className="w-full h-full object-cover" draggable="false" />
+                                <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1750957969/feshia%20Images/3_evlsp5.png" alt="Visa processing" className="w-full h-full object-cover" draggable="false" />
                             </div>
                             <h3 className="text-xl pt-3 font-semibold mb-2">Visa processing</h3>
                             <p className="text-black pb-6">
@@ -45,7 +45,7 @@ const WhatWeDo = () => {
                         </div>
                         <div className="bg-[#EFEBEB] p-4 rounded-tl-[50%] rounded-tr-[50%] text-center">
                             <div className="w-full h-auto mb-4">
-                                <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1750957969/feshia%20Images/3_evlsp5.png" alt="Settling In" className="w-full h-full object-cover" draggable="false" />
+                                <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1750957970/feshia%20Images/4_wifqyz.png" alt="Settling In" className="w-full h-full object-cover" draggable="false" />
                             </div>
                             <h3 className="text-xl pt-3 font-semibold mb-2">Settling In</h3>
                             <p className="text-black pb-6">

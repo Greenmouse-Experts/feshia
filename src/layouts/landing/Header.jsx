@@ -177,7 +177,7 @@ const NavBar = () => {
               </button>
               {dropdownOpen.resources && (
                 <div className="absolute left-0 mt-2 w-28 bg-white text-black rounded-md shadow-lg z-10">
-                  <Link to="#" className="block px-4 py-2 text-sm hover:bg-gray-100">FAQs</Link>
+                  <Link to="/faqs" className="block px-4 py-2 text-sm hover:bg-gray-100">FAQs</Link>
                   {/* <Link to="#" className="block px-4 py-2 text-sm hover:bg-gray-100">Our App</Link>
                   <Link to="#" className="block px-4 py-2 text-sm hover:bg-gray-100">Videos</Link> */}
                 </div>
@@ -345,7 +345,7 @@ const NavBar = () => {
                 </button>
                 {mobileDropdownOpen.resources && (
                   <div className="ml-4 mt-2 flex flex-col gap-2">
-                    <Link to="#" className="text-black py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link to="/faqs" className="text-black py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       FAQs
                     </Link>
                     <Link to="#" className="text-black py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>

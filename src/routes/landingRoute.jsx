@@ -10,6 +10,7 @@ import Events from "../modules/Home/Event";
 import FAQs from "../modules/Home/Faqs";
 import Institution from "../modules/Home/Program";
 import WhyFestia from "../modules/Home/WhyFeshia";
+import UniversitySearch from "../modules/Home/University";
 
 export const landingRooutes = [
   {
@@ -60,6 +61,11 @@ export const landingRooutes = [
         path: 'why-feshia',
         element: <WhyFestia />,
       },
+      {
+        path: 'university-search',
+        element: <UniversitySearch />,
+      },
+      
     ],
   },
 ];
