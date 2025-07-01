@@ -38,7 +38,7 @@ const FeaturedDestinations = () => {
     };
 
     return (
-        <div className="w-full px-4 mb-16 relative">
+        <div className="w-full px-4 section relative">
             <div className="Resizer mx-auto">
                 <div className="flex justify-between items-center mb-12">
                     <h2 className="text-3xl font-semibold">Featured Study Destinations</h2>
@@ -50,14 +50,14 @@ const FeaturedDestinations = () => {
                 {/* Desktop Arrows - Hidden on Mobile */}
                 <button
                     onClick={() => scroll("left")}
-                    className="absolute left-0 md:left-28 top-1/2 transform -translate-y-1/2 z-10 bg-black cursor-pointer text-white rounded-full p-2 hidden md:block hover:bg-gray-800 transition-colors"
+                    className="absolute left-0 md:mt-7 mt-2 md:left-28 top-1/2 transform -translate-y-1/2 z-10 bg-black cursor-pointer text-white rounded-full p-2 hidden md:block hover:bg-gray-800 transition-colors"
                 >
                     <ChevronLeft size={16} />
                 </button>
 
                 <button
                     onClick={() => scroll("right")}
-                    className="absolute right-0 md:right-28 top-1/2 transform -translate-y-1/2 z-10 bg-black cursor-pointer text-white rounded-full p-2 hidden md:block hover:bg-gray-800 transition-colors"
+                    className="absolute right-0 md:mt-7 mt-2  md:right-28 top-1/2 transform -translate-y-1/2 z-10 bg-black cursor-pointer text-white rounded-full p-2 hidden md:block hover:bg-gray-800 transition-colors"
                 >
                     <ChevronRight size={16} />
                 </button>

@@ -65,11 +65,11 @@ const articles = [
 
 const FeaturedInstitutions = () => {
     return (
-        <div className="w-full px-4 only-bottom">
+        <div className="w-full px-4 section bg-[#F4F4F4]">
             <div className="Resizer">
                 <div className="flex justify-between items-center mb-12">
                     <h2 className="text-3xl text-black font-semibold">Featured Institutions</h2>
-                    <a href="#" className="text-[#ED268F] text-3xl underline cursor-pointer font-medium text-sm hidden md:block">
+                    <a href="#" className="text-[#ED268F] underline cursor-pointer font-medium text-sm hidden md:block">
                         View More
                     </a>
                 </div>

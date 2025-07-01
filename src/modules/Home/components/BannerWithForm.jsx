@@ -73,14 +73,14 @@ const Banner = () => {
       </AnimatePresence>
 
       {/* Banner Text */}
-      <div className="z-10 p-6 sm:p-10 md:pl-4 lg:pl-24 max-w-3xl text-white self-center">
+      <div className="z-10 p-6 sm:p-10 md:pl-28 xl:pl-35 max-w-[58%] text-white self-center">
         <motion.div
           key={slides[current].id}
           initial={{ x: -20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: -20, opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug"
+          className="text-2xl sm:text-3xl lg:text-5xl  font-bold leading-snug"
         >
           {slides[current].text.includes('courses') && (
             <>

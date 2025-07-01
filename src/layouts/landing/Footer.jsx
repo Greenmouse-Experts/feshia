@@ -59,7 +59,7 @@ const Footer = () => {
                                 <li><Link to="/events">Events</Link></li>
                                 <li><Link to="#">Apply Now</Link></li>
                                 <li><Link to="/university-search">University Search</Link></li>
-                                
+
                             </ul>
                             ⁠
 
@@ -139,26 +139,30 @@ const Footer = () => {
                             <ul className="space-y-4 text-sm">
                                 <li>
                                     <strong>Nigeria</strong>
-                                    <ul className="space-y-2 mt-2">
-                                        <li>
-                                            7 Ikordodu Road, Maryland Behind
-                                            Maryland BRT Bus Stop Maryland Lagos - Nigeria
+                                    <ul className="space-y-3 mt-3 ml-4 text-base">
+                                        <li className="flex items-center mr-10">
+                                            <MapPinIcon className="h-9 w-9 text-[#ED268F] mr-2" />
+                                            7 Ikorodu Road, Maryland Behind Maryland BRT Bus Stop Maryland Lagos - Nigeria
                                         </li>
-                                        <li>
+                                        <li className="flex items-center">
+                                            <PhoneIcon className="h-4 w-4 text-[#ED268F] mr-2" />
                                             +234 901 994 7067
                                         </li>
-                                        <li>
+                                        <li className="flex items-center">
+                                            <EnvelopeIcon className="h-4 w-4 text-[#ED268F] mr-2" />
                                             nigeriaoffice@feshia.com
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
                                     <strong>Australia</strong>
-                                    <ul className="space-y-2 mt-2">
-                                        <li>
+                                    <ul className="space-y-3 mt-3 ml-4 text-base">
+                                        <li className="flex items-center">
+                                            <MapPinIcon className="h-4 w-4 text-pink-600 mr-2" />
                                             Box 221, Flinders Lane, VIC 8009
                                         </li>
-                                        <li>
+                                        <li className="flex items-center">
+                                            <PhoneIcon className="h-4 w-4 text-pink-600 mr-2" />
                                             +61 412 581 295
                                         </li>
                                     </ul>
