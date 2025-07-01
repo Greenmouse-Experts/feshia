@@ -54,7 +54,7 @@ const Footer = () => {
                             <ul className="space-y-4 text-base">
                                 <li><Link to="/about">About Us</Link></li>
                                 <li><Link to="/student-blog">For Student</Link></li>
-                                <li><Link to="#">For Institution</Link></li>
+                                <li><Link to="/institution">For Institution</Link></li>
                                 <li><Link to="#">Resources</Link></li>
                                 <li><Link to="#">Events</Link></li>
                                 <li><Link to="#">Apply Now</Link></li>
@@ -70,7 +70,7 @@ const Footer = () => {
                                 <li>Articles</li>
                                 <li>Contact Us</li>
                                 <li>Disclaimer</li>
-                                <li>FAQs</li>
+                                <li><Link to="/faqs">FAQs</Link></li>
                                 <li>Privacy Policy</li>
                                 <li>Terms & Condition</li>
                             </ul>
@@ -170,7 +170,7 @@ const Footer = () => {
                             <ul className="space-y-4 text-sm">
                                 <li>About Us</li>
                                 <li>For Student</li>
-                                <li>For Institution</li>
+                                <li><Link to="/institution">For Institution</Link></li>
                                 <li>Resources</li>
                                 <li>Events</li>
                                 <li>Apply Now</li>
@@ -184,7 +184,7 @@ const Footer = () => {
                                 <li>Articles</li>
                                 <li>Contact Us</li>
                                 <li>Disclaimer</li>
-                                <li>FAQs</li>
+                                <li><Link to="/faqs">FAQs</Link></li>
                                 <li>Privacy Policy</li>
                                 <li>Terms & Condition</li>
                             </ul>

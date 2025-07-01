@@ -72,7 +72,6 @@ const NavBar = () => {
       if (mobileStudentRef.current && !mobileStudentRef.current.contains(event.target)) {
         setMobileDropdownOpen((prev) => ({ ...prev, student: false }));
       }
-
       if (mobileAboutRef.current && !mobileAboutRef.current.contains(event.target)) {
         setMobileDropdownOpen((prev) => ({ ...prev, about: false }));
       }
@@ -157,17 +156,17 @@ const NavBar = () => {
               </button>
               {dropdownOpen.institution && (
                 <div className="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg z-10">
-                  <Link to="#" className="block px-4 py-2 text-sm hover:bg-gray-100">
+                  <Link to="/partners" className="block px-4 py-2 text-sm hover:bg-gray-100">
                     Partner with Feshia
                   </Link>
-                  <Link to="#" className="block px-4 py-2 text-sm hover:bg-gray-100">
+                  <Link to="/institution" className="block px-4 py-2 text-sm hover:bg-gray-100">
                     Institution Blog
                   </Link>
                 </div>
               )}
             </div>
 
-            <a href="#" className="text-sm font-medium hover:text-pink-500 transition">Events</a>
+            <Link to="/events" className="text-sm font-medium hover:text-pink-500 transition">Events</Link>
 
             <div className="relative" ref={resourcesRef}>
               <button
@@ -197,7 +196,7 @@ const NavBar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={toggleMobileMenu}
               className="bg-[#ED268F] text-white py-2 px-2 rounded-full flex items-center gap-2"
@@ -269,20 +268,20 @@ const NavBar = () => {
               <div ref={mobileAboutRef}>
                 <button
                   onClick={() => toggleMobileDropdown('about')}
-                  className="flex items-center justify-between w-full text-gray-800 font-medium py-2 hover:text-pink-600 transition"
+                  className="flex items-center justify-between w-full text-black font-medium py-2 hover:text-pink-600 transition"
                 >
                   About Us
                   <ChevronDownIcon className={`w-4 h-4 transition-transform ${mobileDropdownOpen.about ? 'rotate-180' : ''}`} />
                 </button>
                 {mobileDropdownOpen.about && (
                   <div className="ml-4 mt-2 flex flex-col gap-2">
-                    <Link to="/about" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link to="/about" className="text-black py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       Our Story
                     </Link>
-                    <Link to="/what-we-do" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link to="/what-we-do" className="text-black py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       What we do
                     </Link>
-                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link to="#" className="text-black py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       Why Feshia
                     </Link>
                   </div>
@@ -293,17 +292,17 @@ const NavBar = () => {
               <div ref={mobileStudentRef}>
                 <button
                   onClick={() => toggleMobileDropdown('student')}
-                  className="flex items-center justify-between w-full text-gray-800 font-medium py-2 hover:text-pink-600 transition"
+                  className="flex items-center justify-between w-full text-black font-medium py-2 hover:text-pink-600 transition"
                 >
                   For Student
                   <ChevronDownIcon className={`w-4 h-4 transition-transform ${mobileDropdownOpen.student ? 'rotate-180' : ''}`} />
                 </button>
                 {mobileDropdownOpen.student && (
                   <div className="ml-4 mt-2 flex flex-col gap-2">
-                    <Link to="/book-appointment" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link to="/book-appointment" className="text-black py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       Book an Appointment
                     </Link>
-                    <Link to="/student-blog" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link to="/student-blog" className="text-black py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       Student Blog
                     </Link>
                   </div>
@@ -314,7 +313,7 @@ const NavBar = () => {
               <div ref={mobileInstitutionRef}>
                 <button
                   onClick={() => toggleMobileDropdown('institution')}
-                  className="flex items-center justify-between w-full text-gray-800 font-medium py-2 hover:text-pink-600 transition"
+                  className="flex items-center justify-between w-full text-black font-medium py-2 hover:text-pink-600 transition"
                 >
                   For Institution
                   <ChevronDownIcon className={`w-4 h-4 transition-transform ${mobileDropdownOpen.institution ? 'rotate-180' : ''}`} />
@@ -322,38 +321,37 @@ const NavBar = () => {
                 {mobileDropdownOpen.institution && (
                   <div className="ml-4 mt-2 flex flex-col gap-2">
 
-                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link to="#" className="text-black py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       Partner with Feshia
                     </Link>
-                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link to="/institution" className="text-black py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       Institution Blog
                     </Link>
                   </div>
                 )}
               </div>
 
-              <a href="#" className="text-gray-800 font-medium py-2 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
-                Events
-              </a>
+              <Link to="/events" className="text-black font-medium py-2 hover:text-pink-600 transition">Events</Link>
+             
 
               {/* Resources Dropdown */}
               <div ref={mobileResourcesRef}>
                 <button
                   onClick={() => toggleMobileDropdown('resources')}
-                  className="flex items-center justify-between w-full text-gray-800 font-medium py-2 hover:text-pink-600 transition"
+                  className="flex items-center justify-between w-full text-black font-medium py-2 hover:text-pink-600 transition"
                 >
                   Resources
                   <ChevronDownIcon className={`w-4 h-4 transition-transform ${mobileDropdownOpen.resources ? 'rotate-180' : ''}`} />
                 </button>
                 {mobileDropdownOpen.resources && (
                   <div className="ml-4 mt-2 flex flex-col gap-2">
-                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link to="#" className="text-black py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       FAQs
                     </Link>
-                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link to="#" className="text-black py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       Our App
                     </Link>
-                    <Link to="#" className="text-gray-600 py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link to="#" className="text-black py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       Videos
                     </Link>
                   </div>

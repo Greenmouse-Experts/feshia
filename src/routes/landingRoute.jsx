@@ -5,6 +5,11 @@ import ConsultationForm from "../modules/Home/Consultant";
 import WhatWeDo from "../modules/Home/WhatWeDo";
 import BookAnApppointment from "../modules/Home/BookApppointment";
 import StudentAnBlog from "../modules/Home/StudentBlog";
+import Partners from "../modules/Home/Partner";
+import Events from "../modules/Home/Event";
+import FAQs from "../modules/Home/Faqs";
+import Institution from "../modules/Home/Program";
+
 export const landingRooutes = [
   {
     path: "/",
@@ -33,6 +38,22 @@ export const landingRooutes = [
       {
         path: 'student-blog',
         element: <StudentAnBlog />,
+      },
+      {
+        path: 'partners',
+        element: <Partners />,
+      },
+      {
+        path: 'events',
+        element: <Events />,
+      },
+      {
+        path: 'faqs',
+        element: <FAQs />,
+      },
+      {
+        path: 'institution',
+        element: <Institution />,
       },
     ],
   },
