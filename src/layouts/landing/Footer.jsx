@@ -58,6 +58,8 @@ const Footer = () => {
                                 <li><Link to="#">Resources</Link></li>
                                 <li><Link to="/events">Events</Link></li>
                                 <li><Link to="#">Apply Now</Link></li>
+                                <li><Link to="/university-search">University Search</Link></li>
+                                
                             </ul>
                             ⁠
 
@@ -174,6 +176,7 @@ const Footer = () => {
                                 <li>Resources</li>
                                 <li><Link to="/events">Events</Link></li>
                                 <li>Apply Now</li>
+                                <li><Link to="/university-search">University Search</Link></li>
                             </ul>
                         </div>
 

@@ -162,6 +162,9 @@ const NavBar = () => {
                   <Link to="/institution" className="block px-4 py-2 text-sm hover:bg-gray-100">
                     Institution Blog
                   </Link>
+                  <Link to="/university-search" className="block px-4 py-2 text-sm hover:bg-gray-100">
+                    University Search
+                  </Link>
                 </div>
               )}
             </div>
@@ -327,6 +330,9 @@ const NavBar = () => {
                     <Link to="/institution" className="text-black py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       Institution Blog
                     </Link>
+                    <Link to="/university-search" className="block px-4 py-2 text-sm hover:bg-gray-100">
+                    University Search
+                  </Link>
                   </div>
                 )}
               </div>
