@@ -73,7 +73,7 @@ const Banner = () => {
       </AnimatePresence>
 
       {/* Banner Text */}
-      <div className="z-10 p-6 sm:p-10 md:pl-28 xl:pl-35 max-w-[58%] text-white self-center">
+      <div className="z-10 p-6 sm:p-10 md:pl-28 xl:pl-35 md:max-w-[58%] max-w-[100%] text-white self-center">
         <motion.div
           key={slides[current].id}
           initial={{ x: -20, opacity: 0 }}
