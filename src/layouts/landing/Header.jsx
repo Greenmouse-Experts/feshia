@@ -120,7 +120,7 @@ const NavBar = () => {
                   <Link to="/what-we-do" className="block px-4 py-2 text-sm hover:bg-gray-100">
                     What we do
                   </Link>
-                  <Link to="#" className="block px-4 py-2 text-sm hover:bg-gray-100">
+                  <Link to="/why-feshia" className="block px-4 py-2 text-sm hover:bg-gray-100">
                     Why Feshia
                   </Link>
                 </div>
@@ -281,7 +281,7 @@ const NavBar = () => {
                     <Link to="/what-we-do" className="text-black py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       What we do
                     </Link>
-                    <Link to="#" className="text-black py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link to="/why-feshia" className="text-black py-1 hover:text-pink-600 transition" onClick={() => setIsMobileMenuOpen(false)}>
                       Why Feshia
                     </Link>
                   </div>

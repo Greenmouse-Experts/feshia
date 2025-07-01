@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer className="bg-black text-white only-top px-4">
             <div className="Resizer mx-auto">
-                
+
                 {/* Desktop Layout */}
                 <div className="px-4">
                     <div className="hidden md:grid lg:grid-cols-5 md:grid-cols-3 gap-8 mb-8">
@@ -67,7 +67,7 @@ const Footer = () => {
                         <div className="col-span-1">
                             <h3 className="text-white text-lg font-bold mb-4">QUICK LINKS</h3>
                             <ul className="space-y-4 text-base">
-                                <li>Articles</li>
+                                <li><Link to="/why-feshia"></Link>Why Feshia</li>
                                 <li>Contact Us</li>
                                 <li>Disclaimer</li>
                                 <li><Link to="/faqs">FAQs</Link></li>
@@ -95,7 +95,7 @@ const Footer = () => {
                         <div className="bg-[#333] p-6 rounded-md w-full max-w-md sm:max-w-lg flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0 sm:space-x-6">
                             {/* Left: Newsletter Form */}
                             <div className="flex-1 w-full">
-                            <h3 className="text-white text-base md:text-base font-bold mb-3">NEWSLETTER</h3>
+                                <h3 className="text-white text-base md:text-base font-bold mb-3">NEWSLETTER</h3>
                                 <form action="">
                                     <input
                                         type="email"
@@ -181,7 +181,7 @@ const Footer = () => {
                         <div>
                             <h3 className="text-white text-lg font-bold mb-4">QUICK LINKS</h3>
                             <ul className="space-y-4 text-sm">
-                                <li>Articles</li>
+                                <li><Link to="/why-feshia"></Link>Why Feshia</li>
                                 <li>Contact Us</li>
                                 <li>Disclaimer</li>
                                 <li><Link to="/faqs">FAQs</Link></li>
@@ -205,33 +205,33 @@ const Footer = () => {
                         </div>
 
                         <div className="items-center justify-center md:flex">
-                        <div className="bg-[#333] p-6 rounded-md w-full max-w-md sm:max-w-lg flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0 sm:space-x-6">
-                            {/* Left: Newsletter Form */}
-                            <div className="flex-1 w-full">
-                            <h3 className="text-white text-base md:text-base font-bold mb-3">NEWSLETTER</h3>
-                                <form action="">
-                                    <input
-                                        type="email"
-                                        placeholder="Enter your Email"
-                                        className="p-4 w-full text-xs bg-white rounded mb-3 italic text-black outline-none" required
-                                    />
-                                    <button type="submit" className="w-full bg-[#ED268F] hover:bg-pink-600 cursor-pointer text-white text-sm font-semibold py-2 rounded-md transition duration-300">
-                                        Send
-                                    </button>
-                                </form>
-                            </div>
+                            <div className="bg-[#333] p-6 rounded-md w-full max-w-md sm:max-w-lg flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0 sm:space-x-6">
+                                {/* Left: Newsletter Form */}
+                                <div className="flex-1 w-full">
+                                    <h3 className="text-white text-base md:text-base font-bold mb-3">NEWSLETTER</h3>
+                                    <form action="">
+                                        <input
+                                            type="email"
+                                            placeholder="Enter your Email"
+                                            className="p-4 w-full text-xs bg-white rounded mb-3 italic text-black outline-none" required
+                                        />
+                                        <button type="submit" className="w-full bg-[#ED268F] hover:bg-pink-600 cursor-pointer text-white text-sm font-semibold py-2 rounded-md transition duration-300">
+                                            Send
+                                        </button>
+                                    </form>
+                                </div>
 
-                            {/* Right: Logo */}
-                            <div className="flex-shrink-0 ">
-                                <img
-                                    src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1750848536/feshia%20Images/Frame_1_puzgs4.png"
-                                    alt="Feshia Logo"
-                                    className="h-20"
-                                    draggable="false"
-                                />
+                                {/* Right: Logo */}
+                                <div className="flex-shrink-0 ">
+                                    <img
+                                        src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1750848536/feshia%20Images/Frame_1_puzgs4.png"
+                                        alt="Feshia Logo"
+                                        className="h-20"
+                                        draggable="false"
+                                    />
+                                </div>
                             </div>
                         </div>
-                    </div>
                         <div className="flex flex-col items-center justify-center mt-8 text-center">
                             <p className="text-base mt-4">©️ {new Date().getFullYear()} Feshia, All Rights Reserved</p>
                         </div>

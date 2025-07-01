@@ -9,6 +9,7 @@ import Partners from "../modules/Home/Partner";
 import Events from "../modules/Home/Event";
 import FAQs from "../modules/Home/Faqs";
 import Institution from "../modules/Home/Program";
+import WhyFestia from "../modules/Home/WhyFeshia";
 
 export const landingRooutes = [
   {
@@ -54,6 +55,10 @@ export const landingRooutes = [
       {
         path: 'institution',
         element: <Institution />,
+      },
+      {
+        path: 'why-feshia',
+        element: <WhyFestia />,
       },
     ],
   },
