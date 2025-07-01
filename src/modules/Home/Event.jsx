@@ -42,19 +42,19 @@ const EventTabs = () => {
                         {activeTab === 'all' && (
                             <>
                                 <div className="bg-[#F6F6F6] p-4 rounded-lg shadow-sm">
-                                    <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1751391659/feshia%20Images/2_ehkihc.jpg" draggable="false" alt="Event 1" className="w-full h-auto object-cover rounded" />
+                                    <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1751391655/feshia%20Images/1_ar4zex.jpg" draggable="false" alt="Event 1" className="w-full h-auto object-cover rounded" />
                                     <h3 className="text-base mb-2 font-bold mt-5">How to Get Scholarship to Study Abroad</h3>
                                     <p className="text-black text-sm">Some Event Description</p>
                                     <p className="text-gray-400 mt-5 text-sm">Mar 23, 2024</p>
                                 </div>
                                 <div className="bg-[#F6F6F6] p-4 rounded-lg shadow-sm">
-                                    <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1751391655/feshia%20Images/1_ar4zex.jpg"  draggable="false" alt="Event 2" className="w-full h-auto object-cover rounded" />
+                                    <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1751391659/feshia%20Images/2_ehkihc.jpg"  draggable="false" alt="Event 2" className="w-full h-auto object-cover rounded" />
                                     <h3 className="text-base mb-2 font-bold mt-5">MTN Scholarships</h3>
                                     <p className="text-black text-sm">Some Event</p>
                                     <p className="text-gray-400 mt-5 text-sm">Mar 23, 2024</p>
                                 </div>
                                 <div className="bg-[#F6F6F6] p-4 rounded-lg shadow-sm">
-                                    <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1751391659/feshia%20Images/2_ehkihc.jpg"  draggable="false" alt="Event 3" className="w-full h-auto object-cover rounded" />
+                                    <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1751391655/feshia%20Images/1_ar4zex.jpg"  draggable="false" alt="Event 3" className="w-full h-auto object-cover rounded" />
                                     <h3 className="text-base mb-2 font-bold mt-5">How to Get Scholarship to Study Abroad</h3>
                                     <p className="text-black text-sm">Some Event</p>
                                     <p className="text-gray-400 mt-5 text-sm">Mar 23, 2024</p>
@@ -64,13 +64,13 @@ const EventTabs = () => {
                         {activeTab === 'upcoming' && (
                             <>
                                 <div className="bg-[#F6F6F6] p-4 rounded-lg shadow-sm">
-                                    <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1751391659/feshia%20Images/2_ehkihc.jpg"  draggable="false" alt="Upcoming Event 1" className="w-full h-auto object-cover rounded" />
+                                    <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1751391655/feshia%20Images/1_ar4zex.jpg"  draggable="false" alt="Upcoming Event 1" className="w-full h-auto object-cover rounded" />
                                     <h3 className="text-base mb-2 font-bold mt-5">How to Get Scholarship to Study Abroad</h3>
                                     <p className="text-black text-sm">Some Event Description</p>
                                     <p className="text-gray-400 mt-5 text-sm">Mar 23, 2024</p>
                                 </div>
                                 <div className="bg-[#F6F6F6] p-4 rounded-lg shadow-sm">
-                                    <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1751391655/feshia%20Images/1_ar4zex.jpg"  draggable="false" alt="Upcoming Event 2" className="w-full h-auto object-cover rounded" />
+                                    <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1751391659/feshia%20Images/2_ehkihc.jpg"  draggable="false" alt="Upcoming Event 2" className="w-full h-auto object-cover rounded" />
                                     <h3 className="text-base mb-2 font-bold mt-5">MTN Scholarships</h3>
                                     <p className="text-black text-sm">Some Event</p>
                                     <p className="text-gray-400 mt-5 text-sm">Mar 23, 2024</p>
