@@ -14,22 +14,25 @@ const WhyFeshia = () => {
             />
             <div className="w-full px-4 section">
                 <div className="Resizer">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {/* Add your image and content here */}
-                        <div className="p-4 bg-gray-100 rounded-lg">
-                            <img src="your-image-url" alt="Description" className="w-full h-48 object-cover rounded" />
-                            <h3 className="text-lg font-semibold mt-2">Item 1</h3>
-                            <p className="text-gray-600 mt-2">Add your description here.</p>
-                        </div>
-                        <div className="p-4 bg-gray-100 rounded-lg">
-                            <img src="your-image-url" alt="Description" className="w-full h-48 object-cover rounded" />
-                            <h3 className="text-lg font-semibold mt-2">Item 2</h3>
-                            <p className="text-gray-600 mt-2">Add your description here.</p>
-                        </div>
-                        <div className="p-4 bg-gray-100 rounded-lg">
-                            <img src="your-image-url" alt="Description" className="w-full h-48 object-cover rounded" />
-                            <h3 className="text-lg font-semibold mt-2">Item 3</h3>
-                            <p className="text-gray-600 mt-2">Add your description here.</p>
+                <div className="flex items-center justify-center ">
+                        <div className="flex flex-col md:flex-row bg-white">
+                            {/* Image Section */}
+                            <div className="w-full md:w-1/2 p-4">
+                                <img
+                                    src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1751400541/feshia%20Images/Become_a_Partner_b2jver.jpg" // 
+                                    alt="Professional"
+                                    className="w-full h-auto object-cover rounded-lg"
+                                />
+                            </div>
+                            {/* Text Section */}
+                            <div className="w-full md:w-1/2 p-4 flex items-center justify-center md:justify-start">
+                                <div>
+                                    <h2 className="text-xl font-bold text-gray-800">Sincerity of Purpose</h2>
+                                    <p className="mt-4 text-gray-600">
+                                        Feshia works with undiluted sincerity of purpose and a high level of professionalism
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

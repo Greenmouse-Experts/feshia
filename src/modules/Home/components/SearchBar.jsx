@@ -26,12 +26,12 @@ const SearchBar = ({ bgImageUrl }) => {
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-col md:flex-row gap-4 mt-4">
-                <button className="bg-[#ED268F] text-white px-14 py-3 cursor-pointer rounded-md font-medium transition">
+            <div className="flex flex-row gap-4 mt-4">
+                <button className="bg-[#ED268F] text-white px-6 py-3 text-sm cursor-pointer rounded-md font-medium transition">
                     Search
                 </button>
                 <Link to="/consultant">
-                    <button className="bg-[#ED268F] text-white px-6 py-3 cursor-pointer rounded-md font-medium transition">
+                    <button className="bg-[#ED268F] text-white px-6 py-3 text-sm cursor-pointer rounded-md font-medium transition">
                         Talk to a Consultant
                     </button>
                 </Link>
