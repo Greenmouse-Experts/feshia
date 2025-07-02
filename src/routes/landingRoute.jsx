@@ -65,7 +65,6 @@ export const landingRooutes = [
         path: 'university-search',
         element: <UniversitySearch />,
       },
-      
     ],
   },
 ];
